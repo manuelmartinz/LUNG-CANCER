@@ -1,0 +1,2 @@
+kernel,C,gamma,class_weight
+rbf,1,0.1,None

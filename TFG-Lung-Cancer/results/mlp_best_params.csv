@@ -1,0 +1,2 @@
+units_1,units_2,units_3,dropout_1,dropout_2,l2_reg,learning_rate,batch_size,epochs
+128,128,32,0.3,0.4,1e-05,0.0001,128,120

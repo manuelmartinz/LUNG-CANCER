@@ -1,0 +1,2 @@
+max_iter,learning_rate,max_depth,min_samples_leaf,max_leaf_nodes,max_bins
+100,0.2,3,1,15,64

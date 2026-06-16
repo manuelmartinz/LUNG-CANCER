@@ -1,0 +1,12 @@
+.venv/
+venv/
+
+__pycache__/
+*.pyc
+
+.vscode/
+.idea/
+
+
+wandb/
+catboost_info/

@@ -1,0 +1,12 @@
+feature,importance
+pack_years,0.3664857482538039
+age,0.1912415181448935
+copd_diagnosis_Yes,0.07721598989598924
+asbestos_exposure_Yes,0.07681579799406207
+radon_exposure_Medium,0.045016870444905446
+radon_exposure_Low,0.044983746842001564
+secondhand_smoke_exposure_Yes,0.04468162810938722
+family_history_Yes,0.044526208265715704
+gender_Male,0.04044949378335091
+alcohol_consumption_Moderate,0.03504098142907127
+alcohol_consumption_None,0.03354201683681909

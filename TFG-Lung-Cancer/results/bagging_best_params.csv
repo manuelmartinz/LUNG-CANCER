@@ -1,0 +1,2 @@
+n_estimators,max_samples,max_features,bootstrap,bootstrap_features
+100,0.5,1.0,True,False

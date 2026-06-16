@@ -1,0 +1,2 @@
+n_estimators,max_depth,min_samples_split,min_samples_leaf,max_features,criterion,class_weight
+300,15,20,1,0.7,entropy,None

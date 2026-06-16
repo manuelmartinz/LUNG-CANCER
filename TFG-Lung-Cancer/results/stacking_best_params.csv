@@ -1,0 +1,2 @@
+final_estimator__iterations,final_estimator__depth,final_estimator__learning_rate,final_estimator__l2_leaf_reg,final_estimator__border_count
+25,8,0.5,5,128
