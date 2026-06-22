@@ -1,0 +1,83 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (4 valores)
+============================================================
+  n_estimators=50                   | val_f1_weighted=0.6755±0.0072 | train=1.0000±0.0000 | 4.2s ★ BEST
+  n_estimators=100                  | val_f1_weighted=0.6755±0.0068 | train=1.0000±0.0000 | 6.0s ★ BEST
+C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\backend\utils.py:63: UserWarning: Failed to kill subprocesses on this platform. Please installpsutil: https://github.com/giampaolo/psutil
+Details:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\backend\utils.py", line 58, in _kill_process_tree_without_psutil
+    _windows_taskkill_process_tree(process.pid)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\backend\utils.py", line 81, in _windows_taskkill_process_tree
+    subprocess.check_output(
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['taskkill', '/F', '/T', '/PID', '58600']' returned non-zero exit status 3221225786.
+
+  warnings.warn(
+C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\backend\utils.py:63: UserWarning: Failed to kill subprocesses on this platform. Please installpsutil: https://github.com/giampaolo/psutil
+Details:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\backend\utils.py", line 58, in _kill_process_tree_without_psutil
+    _windows_taskkill_process_tree(process.pid)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\backend\utils.py", line 81, in _windows_taskkill_process_tree
+    subprocess.check_output(
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['taskkill', '/F', '/T', '/PID', '70280']' returned non-zero exit status 3221225786.
+
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1682, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1800, in _retrieve
+    time.sleep(0.01)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\extra_trees_gridsearch.py", line 139, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\extra_trees_gridsearch.py", line 74, in main
+    gs.fit(X_train, y_train)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\grid_search.py", line 105, in fit
+    cv_results = cross_validate(
+                 ^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 373, in cross_validate
+    results = parallel(
+              ^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 2072, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1732, in _get_outputs
+    self._abort()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1646, in _abort
+    backend.abort_everything(ensure_ready=ensure_ready)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\_parallel_backends.py", line 725, in abort_everything
+    self._workers.terminate(kill_workers=True)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\executor.py", line 86, in terminate
+    self.shutdown(kill_workers=kill_workers)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\process_executor.py", line 1333, in shutdown
+    executor_manager_thread.join()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\threading.py", line 1119, in join
+    self._wait_for_tstate_lock()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\threading.py", line 1139, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

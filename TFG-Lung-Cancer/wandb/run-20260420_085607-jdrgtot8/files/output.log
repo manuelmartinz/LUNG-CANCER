@@ -1,0 +1,30 @@
+
+============================================================
+Paso 1: Optimizando 'voting' (2 valores)
+============================================================
+  voting=hard                 | val_f1_weighted=0.7157±0.0032 | train=0.7256±0.0007 | 18.6s ★ BEST
+  voting=soft                 | val_f1_weighted=0.7138±0.0040 | train=0.7300±0.0009 | 17.7s
+
+  ► Mejor valor para 'voting': hard (val_f1_weighted=0.7157)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'voting': 'hard'}
+Mejor val_f1_weighted: 0.7157
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.65      0.40      0.50      3127
+           1       0.77      0.90      0.83      6873
+
+    accuracy                           0.75     10000
+   macro avg       0.71      0.65      0.66     10000
+weighted avg       0.73      0.75      0.73     10000
+
+Matriz de confusión:
+[[1261 1866]
+ [ 678 6195]]
+Mejores hiperparámetros: {'voting': 'hard'}
+Accuracy en test: 0.7456

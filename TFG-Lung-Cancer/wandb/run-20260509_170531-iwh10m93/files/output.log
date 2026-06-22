@@ -1,0 +1,93 @@
+
+============================================================
+Paso 1: Optimizando 'iterations' (5 valores)
+============================================================
+  iterations=100                  | ERROR:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 31, in fit
+    if self.cat_feature_indices and len(self.cat_feature_indices) > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CatBoostCategoricalWrapper' object has no attribute 'cat_feature_indices'
+
+  iterations=200                  | ERROR:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 31, in fit
+    if self.cat_feature_indices and len(self.cat_feature_indices) > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CatBoostCategoricalWrapper' object has no attribute 'cat_feature_indices'
+
+  iterations=500                  | ERROR:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 31, in fit
+    if self.cat_feature_indices and len(self.cat_feature_indices) > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CatBoostCategoricalWrapper' object has no attribute 'cat_feature_indices'
+
+  iterations=800                  | ERROR:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 31, in fit
+    if self.cat_feature_indices and len(self.cat_feature_indices) > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CatBoostCategoricalWrapper' object has no attribute 'cat_feature_indices'
+
+  iterations=1000                 | ERROR:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 31, in fit
+    if self.cat_feature_indices and len(self.cat_feature_indices) > 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CatBoostCategoricalWrapper' object has no attribute 'cat_feature_indices'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 135, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 99, in main
+    gs.fit(X_train, y_train)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\grid_search.py", line 212, in fit
+    raise ValueError(
+ValueError: No hubo configuraciones válidas para 'iterations' con parámetros actuales: {}

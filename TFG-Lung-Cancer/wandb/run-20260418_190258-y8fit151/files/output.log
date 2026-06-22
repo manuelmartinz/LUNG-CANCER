@@ -1,0 +1,53 @@
+
+============================================================
+Paso 1: Optimizando 'voting' (2 valores)
+============================================================
+  voting=hard                 | val_f1_weighted=0.7157±0.0032 | train=0.7256±0.0007 | 12.1s ★ BEST
+  voting=soft                 | val_f1_weighted=0.7138±0.0040 | train=0.7300±0.0009 | 11.3s
+
+  ► Mejor valor para 'voting': hard (val_f1_weighted=0.7157)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'voting': 'hard'}
+Mejor val_f1_weighted: 0.7157
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.65      0.40      0.50      3127
+           1       0.77      0.90      0.83      6873
+
+    accuracy                           0.75     10000
+   macro avg       0.71      0.65      0.66     10000
+weighted avg       0.73      0.75      0.73     10000
+
+Matriz de confusión:
+[[1261 1866]
+ [ 678 6195]]
+Mejores hiperparámetros: {'voting': 'hard'}
+Accuracy en test: 0.7456
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\_available_if.py", line 32, in _check
+    check_result = self.check(obj)
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\ensemble\_voting.py", line 442, in _check_voting
+    raise AttributeError(
+AttributeError: predict_proba is not available when voting='hard'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\voting_gridsearch.py", line 120, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\voting_gridsearch.py", line 103, in main
+    print(f"ROC AUC en test: {roc_auc_score(y_test, gs.best_estimator_.predict_proba(X_test)[:, 1]):.4f}")
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\_available_if.py", line 43, in __get__
+    self._check(obj, owner=owner)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\_available_if.py", line 34, in _check
+    raise AttributeError(attr_err_msg) from e
+AttributeError: This 'VotingClassifier' has no attribute 'predict_proba'

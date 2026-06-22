@@ -1,0 +1,1 @@
+{"columns": ["step", "param_name", "best_value", "best_val_score"], "data": [[1, "C", "0.1", 0.6901021545815159], [2, "penalty", "l2", 0.6901021545815159], [3, "solver", "saga", 0.6901224394541279], [4, "class_weight", "None", 0.6901224394541279], [5, "max_iter", "200", 0.6901224394541279]]}

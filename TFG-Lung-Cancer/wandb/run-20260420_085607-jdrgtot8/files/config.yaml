@@ -1,0 +1,137 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            nokoq1uoxnjev36uznmp86nvq889u1e0:
+                args:
+                    - --data
+                    - src/data/lung_cancer_dataset.csv
+                cpu_count: 12
+                cpu_count_logical: 14
+                disk:
+                    /:
+                        total: "487490318336"
+                        used: "138874327040"
+                email: manuelmh@correo.ugr.es
+                executable: C:\Users\manum\miniconda3\envs\tfg-lung\python.exe
+                git:
+                    commit: 6db0134cc7b8c4d500925fa2554588be3fc3101c
+                    remote: https://github.com/manuelmartinz/TFG-Lung-Cancer.git
+                host: BOOK-9AKGEL70A9
+                memory:
+                    total: "16605630464"
+                os: Windows-10-10.0.26200-SP0
+                program: -m src.models.voting_gridsearch
+                python: CPython 3.11.15
+                root: C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer
+                startedAt: "2026-04-20T06:56:07.525376Z"
+                writerId: nokoq1uoxnjev36uznmp86nvq889u1e0
+        m: []
+        python_version: 3.11.15
+        t:
+            "1":
+                - 5
+                - 6
+                - 53
+            "2":
+                - 5
+                - 6
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+                - 62
+            "4": 3.11.15
+            "5": 0.25.1
+            "8":
+                - 3
+            "12": 0.25.1
+            "13": windows-amd64
+        visualize:
+            step_1/barras_val_f1:
+                panel_config:
+                    fieldSettings:
+                        label: param_value
+                        value: val_f1_mean
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: 'Paso 1 — voting: val F1 por valor'
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_1/barras_val_f1_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_1/lineas_train_vs_val:
+                panel_config:
+                    fieldSettings:
+                        lineKey: lineKey
+                        lineVal: lineVal
+                        step: step
+                    panelDefId: wandb/lineseries/v0
+                    stringSettings:
+                        title: 'Paso 1 — voting: Train vs Val F1'
+                        xname: índice valor
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_1/lineas_train_vs_val_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+drop_cols:
+    value:
+        - patient_id
+encoding:
+    value: onehot
+filepath:
+    value: src/data/lung_cancer_dataset.csv
+impute_strategy_cat:
+    value: most_frequent
+impute_strategy_num:
+    value: median
+model:
+    value: VotingClassifier
+n_rows:
+    value: null
+param_grid:
+    value:
+        voting:
+            - hard
+            - soft
+random_state:
+    value: 42
+scale:
+    value: true
+target_col:
+    value: lung_cancer

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\voting_gridsearch.py", line 122, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\voting_gridsearch.py", line 75, in main
+    ("gb", HistGradientBoostingClassifier(random_state=args.seed, max_iter=100, max_depth=3,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'HistGradientBoostingClassifier' is not defined

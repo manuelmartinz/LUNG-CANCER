@@ -1,0 +1,1 @@
+{"columns": ["step", "param_name", "best_value", "best_val_score"], "data": [[1, "n_neighbors", "11", 0.6834609040192194], [2, "weights", "uniform", 0.6834609040192194], [3, "metric", "minkowski", 0.6834609040192194], [4, "p", "2", 0.6834609040192194], [5, "leaf_size", "20", 0.6834609040192194]]}

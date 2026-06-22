@@ -1,0 +1,67 @@
+
+============================================================
+Paso 1: Optimizando 'n_neighbors' (11 valores)
+============================================================
+  n_neighbors=3                    | val_f1_weighted=0.6722±0.0051 | train=0.8235±0.0011 | 5.0s ★ BEST
+  n_neighbors=5                    | val_f1_weighted=0.6789±0.0038 | train=0.7807±0.0017 | 6.1s ★ BEST
+  n_neighbors=7                    | val_f1_weighted=0.6830±0.0031 | train=0.7601±0.0023 | 10.0s ★ BEST
+  n_neighbors=9                    | val_f1_weighted=0.6824±0.0027 | train=0.7474±0.0015 | 7.3s
+  n_neighbors=11                   | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 8.6s ★ BEST
+  n_neighbors=15                   | val_f1_weighted=0.6807±0.0024 | train=0.7237±0.0013 | 9.9s
+  n_neighbors=21                   | val_f1_weighted=0.6778±0.0023 | train=0.7087±0.0015 | 11.8s
+  n_neighbors=25                   | val_f1_weighted=0.6735±0.0040 | train=0.7012±0.0014 | 11.0s
+  n_neighbors=31                   | val_f1_weighted=0.6672±0.0016 | train=0.6901±0.0019 | 12.2s
+  n_neighbors=35                   | val_f1_weighted=0.6631±0.0022 | train=0.6841±0.0025 | 16.9s
+  n_neighbors=41                   | val_f1_weighted=0.6615±0.0019 | train=0.6786±0.0013 | 18.0s
+
+  ► Mejor valor para 'n_neighbors': 11 (val_f1_weighted=0.6835)
+
+============================================================
+Paso 2: Optimizando 'weights' (2 valores)
+============================================================
+  weights=uniform              | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 9.0s ★ BEST
+  weights=distance             | val_f1_weighted=0.6809±0.0053 | train=1.0000±0.0000 | 9.1s
+
+  ► Mejor valor para 'weights': uniform (val_f1_weighted=0.6835)
+
+============================================================
+Paso 3: Optimizando 'metric' (3 valores)
+============================================================
+  metric=minkowski            | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 8.8s ★ BEST
+  metric=manhattan            | val_f1_weighted=0.6826±0.0039 | train=0.7379±0.0024 | 5.8s
+  metric=euclidean            | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 7.9s
+
+  ► Mejor valor para 'metric': minkowski (val_f1_weighted=0.6835)
+
+============================================================
+Paso 4: Optimizando 'leaf_size' (4 valores)
+============================================================
+  leaf_size=20                   | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 8.2s ★ BEST
+  leaf_size=30                   | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 7.2s
+  leaf_size=40                   | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 9.7s
+  leaf_size=50                   | val_f1_weighted=0.6835±0.0043 | train=0.7377±0.0021 | 9.9s
+
+  ► Mejor valor para 'leaf_size': 20 (val_f1_weighted=0.6835)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'n_neighbors': 11, 'weights': 'uniform', 'metric': 'minkowski', 'leaf_size': 20}
+Mejor val_f1_weighted: 0.6835
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.56      0.35      0.43      3127
+           1       0.75      0.87      0.81      6873
+
+    accuracy                           0.71     10000
+   macro avg       0.65      0.61      0.62     10000
+weighted avg       0.69      0.71      0.69     10000
+
+Matriz de confusión:
+[[1109 2018]
+ [ 880 5993]]
+Mejores hiperparámetros: {'n_neighbors': 11, 'weights': 'uniform', 'metric': 'minkowski', 'leaf_size': 20}
+Accuracy en test: 0.7102
+ROC AUC en test: 0.7150

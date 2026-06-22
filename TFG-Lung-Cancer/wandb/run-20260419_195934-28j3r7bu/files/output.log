@@ -1,0 +1,117 @@
+
+============================================================
+Paso 1: Optimizando 'C' (9 valores)
+============================================================
+  C=0.001                | val_f1_weighted=0.6791±0.0026 | train=0.6793±0.0011 | 2.1s ★ BEST
+  C=0.01                 | val_f1_weighted=0.6895±0.0022 | train=0.6896±0.0009 | 1.7s ★ BEST
+  C=0.1                  | val_f1_weighted=0.6901±0.0022 | train=0.6904±0.0009 | 1.5s ★ BEST
+  C=0.5                  | val_f1_weighted=0.6901±0.0022 | train=0.6904±0.0008 | 0.2s
+  C=1                    | val_f1_weighted=0.6901±0.0022 | train=0.6905±0.0008 | 0.1s
+  C=5                    | val_f1_weighted=0.6900±0.0023 | train=0.6905±0.0008 | 0.1s
+  C=10                   | val_f1_weighted=0.6900±0.0023 | train=0.6905±0.0008 | 0.1s
+  C=50                   | val_f1_weighted=0.6900±0.0023 | train=0.6905±0.0008 | 0.1s
+  C=100                  | val_f1_weighted=0.6900±0.0023 | train=0.6905±0.0008 | 0.1s
+
+  ► Mejor valor para 'C': 0.1 (val_f1_weighted=0.6901)
+
+============================================================
+Paso 2: Optimizando 'penalty' (4 valores)
+============================================================
+  penalty=l1                   | ERROR:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\linear_model\_logistic.py", line 1147, in fit
+    solver = _check_solver(self.solver, penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\linear_model\_logistic.py", line 65, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got l1 penalty.
+
+  penalty=l2                   | val_f1_weighted=0.6901±0.0022 | train=0.6904±0.0009 | 0.2s ★ BEST
+  penalty=elasticnet           | ERROR:
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\linear_model\_logistic.py", line 1147, in fit
+    solver = _check_solver(self.solver, penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\linear_model\_logistic.py", line 65, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got elasticnet penalty.
+
+  penalty=None                 | val_f1_weighted=0.6900±0.0023 | train=0.6905±0.0008 | 0.1s
+
+  ► Mejor valor para 'penalty': l2 (val_f1_weighted=0.6901)
+
+============================================================
+Paso 3: Optimizando 'solver' (3 valores)
+============================================================
+  solver=lbfgs                | val_f1_weighted=0.6901±0.0022 | train=0.6904±0.0009 | 0.2s ★ BEST
+  solver=liblinear            | val_f1_weighted=0.6901±0.0021 | train=0.6904±0.0008 | 0.2s
+  solver=saga                 | val_f1_weighted=0.6901±0.0023 | train=0.6904±0.0008 | 0.3s ★ BEST
+
+  ► Mejor valor para 'solver': saga (val_f1_weighted=0.6901)
+
+============================================================
+Paso 4: Optimizando 'class_weight' (2 valores)
+============================================================
+  class_weight=None                 | val_f1_weighted=0.6901±0.0023 | train=0.6904±0.0008 | 0.3s ★ BEST
+  class_weight=balanced             | val_f1_weighted=0.6748±0.0026 | train=0.6748±0.0008 | 0.3s
+
+  ► Mejor valor para 'class_weight': None (val_f1_weighted=0.6901)
+
+============================================================
+Paso 5: Optimizando 'max_iter' (4 valores)
+============================================================
+  max_iter=200                  | val_f1_weighted=0.6901±0.0023 | train=0.6904±0.0008 | 0.3s ★ BEST
+  max_iter=500                  | val_f1_weighted=0.6901±0.0023 | train=0.6904±0.0008 | 0.3s
+  max_iter=1000                 | val_f1_weighted=0.6901±0.0023 | train=0.6904±0.0008 | 0.3s
+  max_iter=2000                 | val_f1_weighted=0.6901±0.0023 | train=0.6904±0.0008 | 0.3s
+
+  ► Mejor valor para 'max_iter': 200 (val_f1_weighted=0.6901)
+C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\linear_model\_logistic.py:1135: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', and C=np.inf instead of penalty=None.
+  warnings.warn(
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'C': 0.1, 'penalty': 'l2', 'solver': 'saga', 'class_weight': None, 'max_iter': 200}
+Mejor val_f1_weighted: 0.6901
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.62      0.34      0.44      3127
+           1       0.75      0.90      0.82      6873
+
+    accuracy                           0.73     10000
+   macro avg       0.68      0.62      0.63     10000
+weighted avg       0.71      0.73      0.70     10000
+
+Matriz de confusión:
+[[1069 2058]
+ [ 659 6214]]
+Mejores hiperparámetros: {'C': 0.1, 'penalty': 'l2', 'solver': 'saga', 'class_weight': None, 'max_iter': 200}
+Accuracy en test: 0.7283
+ROC AUC en test: 0.7438

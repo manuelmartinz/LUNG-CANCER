@@ -1,0 +1,57 @@
+
+============================================================
+Paso 1: Optimizando 'kernel' (4 valores)
+============================================================
+  kernel=rbf                  | val_f1_weighted=0.6851±0.0022 | train=0.6934±0.0016 | 66.2s ★ BEST
+  kernel=linear               | val_f1_weighted=0.5599±0.0001 | train=0.5599±0.0000 | 50.4s
+  kernel=poly                 | val_f1_weighted=0.6406±0.0021 | train=0.6416±0.0016 | 60.4s
+  kernel=sigmoid              | val_f1_weighted=0.6386±0.0039 | train=0.6321±0.0022 | 84.3s
+
+  ► Mejor valor para 'kernel': rbf (val_f1_weighted=0.6851)
+
+============================================================
+Paso 2: Optimizando 'C' (5 valores)
+============================================================
+  C=0.01                 | val_f1_weighted=0.5642±0.0011 | train=0.5643±0.0010 | 105.7s ★ BEST
+  C=0.1                  | val_f1_weighted=0.6635±0.0019 | train=0.6659±0.0022 | 98.3s ★ BEST
+  C=1                    | val_f1_weighted=0.6851±0.0022 | train=0.6934±0.0016 | 85.6s ★ BEST
+  C=10                   | val_f1_weighted=0.6899±0.0030 | train=0.7094±0.0018 | 113.0s ★ BEST
+  C=100                  | val_f1_weighted=0.6920±0.0029 | train=0.7234±0.0028 | 205.3s ★ BEST
+
+  ► Mejor valor para 'C': 100 (val_f1_weighted=0.6920)
+
+============================================================
+Paso 3: Optimizando 'gamma' (6 valores)
+============================================================
+  gamma=scale                | val_f1_weighted=0.6920±0.0029 | train=0.7234±0.0028 | 259.6s ★ BEST
+  gamma=auto                 | val_f1_weighted=0.6921±0.0030 | train=0.7235±0.0028 | 51700.2s ★ BEST
+  gamma=0.001                | val_f1_weighted=0.6799±0.0021 | train=0.6799±0.0017 | 76.2s
+  gamma=0.01                 | val_f1_weighted=0.6781±0.0032 | train=0.6805±0.0026 | 93.2s
+  gamma=0.1                  | val_f1_weighted=0.6916±0.0023 | train=0.7263±0.0024 | 194.2s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/manuelmh/proyectos/manuel/src/models/svm_gridsearch.py", line 97, in <module>
+    main()
+  File "/home/manuelmh/proyectos/manuel/src/models/svm_gridsearch.py", line 68, in main
+    gs.fit(X_train, y_train)
+  File "/home/manuelmh/proyectos/manuel/src/grid_search.py", line 104, in fit
+    cv_results = cross_validate(
+                 ^^^^^^^^^^^^^^^
+  File "/home/manuelmh/proyectos/manuel/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manuelmh/proyectos/manuel/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 373, in cross_validate
+    results = parallel(
+              ^^^^^^^^^
+  File "/home/manuelmh/proyectos/manuel/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manuelmh/proyectos/manuel/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 2072, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/home/manuelmh/proyectos/manuel/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1682, in _get_outputs
+    yield from self._retrieve()
+  File "/home/manuelmh/proyectos/manuel/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1800, in _retrieve
+    time.sleep(0.01)
+KeyboardInterrupt

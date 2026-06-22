@@ -1,0 +1,8 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (5 valores)
+============================================================
+  n_estimators=50                   | val_f1_weighted=0.6755±0.0072 | train=1.0000±0.0000 | 3.2s ★ BEST
+  n_estimators=100                  | val_f1_weighted=0.6753±0.0070 | train=1.0000±0.0000 | 5.0s
+  n_estimators=200                  | val_f1_weighted=0.6760±0.0064 | train=1.0000±0.0000 | 6.8s ★ BEST
+  n_estimators=300                  | val_f1_weighted=0.6763±0.0065 | train=1.0000±0.0000 | 19.2s ★ BEST

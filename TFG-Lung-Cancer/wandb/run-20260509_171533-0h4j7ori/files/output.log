@@ -1,0 +1,19 @@
+
+============================================================
+Paso 1: Optimizando 'iterations' (5 valores)
+============================================================
+  iterations=100                  | ERROR: got an unexpected keyword argument 'fit_params'
+  iterations=200                  | ERROR: got an unexpected keyword argument 'fit_params'
+  iterations=500                  | ERROR: got an unexpected keyword argument 'fit_params'
+  iterations=800                  | ERROR: got an unexpected keyword argument 'fit_params'
+  iterations=1000                 | ERROR: got an unexpected keyword argument 'fit_params'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 116, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 80, in main
+    gs.fit(X_train, y_train)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\grid_search.py", line 216, in fit
+    raise ValueError(
+ValueError: No hubo configuraciones válidas para 'iterations' con parámetros actuales: {}

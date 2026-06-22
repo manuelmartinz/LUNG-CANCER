@@ -1,0 +1,15 @@
+{
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-04-10T16:48:44.705779Z",
+  "args": [
+    "--data",
+    "src/data/lung_cancer_dataset.csv"
+  ],
+  "program": "-m src.models.hist_gradient_boosting_gridsearch",
+  "email": "manuelmh@correo.ugr.es",
+  "root": "/home/manuelmh/proyectos/manuel",
+  "host": "BOOK-9AKGEL70A9",
+  "executable": "/home/manuelmh/proyectos/manuel/.venv/bin/python3",
+  "writerId": "ldojq32omlzpsmqv3p23spsdxdjl15gf"
+}

@@ -1,0 +1,24 @@
+
+============================================================
+Paso 1: Optimizando 'iterations' (5 valores)
+============================================================
+  iterations=100                  | val_f1_weighted=0.7171±0.0026 | train=0.7294±0.0016 | 24.0s ★ BEST
+  iterations=200                  | val_f1_weighted=0.7156±0.0019 | train=0.7362±0.0007 | 54.7s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 116, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 80, in main
+    gs.fit(X_train, y_train)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\grid_search.py", line 135, in fit
+    model_fold.fit(X_train, y_train, **self.fit_params)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\catboost\core.py", line 5547, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, graph, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\catboost\core.py", line 2716, in _fit
+    self._train(
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\catboost\core.py", line 1824, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 5430, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 5479, in _catboost._CatBoost._train
+KeyboardInterrupt

@@ -1,0 +1,1 @@
+{"columns": ["step", "param_name", "best_value", "best_val_score"], "data": [[1, "kernel", "rbf", 0.6851093564961355], [2, "C", "1", 0.6851093564961355], [3, "gamma", "0.1", 0.6860894122724569], [4, "class_weight", "None", 0.6860894122724569]]}

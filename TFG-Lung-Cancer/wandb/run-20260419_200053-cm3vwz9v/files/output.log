@@ -1,0 +1,106 @@
+
+============================================================
+Paso 1: Optimizando 'units_1' (3 valores)
+============================================================
+  units_1=64                   | val_f1_weighted=0.7134±0.0028 | train=0.7216±0.0032 | 88.3s ★ BEST
+  units_1=128                  | val_f1_weighted=0.7139±0.0027 | train=0.7237±0.0020 | 77.0s ★ BEST
+  units_1=256                  | val_f1_weighted=0.7133±0.0024 | train=0.7258±0.0020 | 93.5s
+
+  ► Mejor valor para 'units_1': 128 (val_f1_weighted=0.7139)
+
+============================================================
+Paso 2: Optimizando 'units_2' (3 valores)
+============================================================
+  units_2=32                   | val_f1_weighted=0.7136±0.0036 | train=0.7215±0.0009 | 175.8s ★ BEST
+  units_2=64                   | val_f1_weighted=0.7139±0.0027 | train=0.7237±0.0020 | 70.9s ★ BEST
+  units_2=128                  | val_f1_weighted=0.7140±0.0019 | train=0.7261±0.0026 | 83.5s ★ BEST
+
+  ► Mejor valor para 'units_2': 128 (val_f1_weighted=0.7140)
+
+============================================================
+Paso 3: Optimizando 'units_3' (3 valores)
+============================================================
+  units_3=16                   | val_f1_weighted=0.7132±0.0023 | train=0.7225±0.0033 | 79.4s ★ BEST
+  units_3=32                   | val_f1_weighted=0.7140±0.0019 | train=0.7261±0.0026 | 86.6s ★ BEST
+  units_3=64                   | val_f1_weighted=0.7133±0.0018 | train=0.7249±0.0024 | 115.4s
+
+  ► Mejor valor para 'units_3': 32 (val_f1_weighted=0.7140)
+
+============================================================
+Paso 4: Optimizando 'dropout_1' (3 valores)
+============================================================
+  dropout_1=0.2                  | val_f1_weighted=0.7104±0.0048 | train=0.7258±0.0040 | 80.3s ★ BEST
+  dropout_1=0.3                  | val_f1_weighted=0.7140±0.0019 | train=0.7261±0.0026 | 97.8s ★ BEST
+  dropout_1=0.4                  | val_f1_weighted=0.7117±0.0044 | train=0.7216±0.0036 | 142.6s
+
+  ► Mejor valor para 'dropout_1': 0.3 (val_f1_weighted=0.7140)
+
+============================================================
+Paso 5: Optimizando 'dropout_2' (3 valores)
+============================================================
+  dropout_2=0.2                  | val_f1_weighted=0.7105±0.0006 | train=0.7254±0.0037 | 81.2s ★ BEST
+  dropout_2=0.3                  | val_f1_weighted=0.7134±0.0012 | train=0.7258±0.0020 | 99.6s ★ BEST
+  dropout_2=0.4                  | val_f1_weighted=0.7137±0.0037 | train=0.7256±0.0039 | 123.0s ★ BEST
+
+  ► Mejor valor para 'dropout_2': 0.4 (val_f1_weighted=0.7137)
+
+============================================================
+Paso 6: Optimizando 'l2_reg' (3 valores)
+============================================================
+  l2_reg=1e-05                | val_f1_weighted=0.7138±0.0033 | train=0.7238±0.0018 | 98.6s ★ BEST
+  l2_reg=0.0001               | val_f1_weighted=0.7128±0.0034 | train=0.7226±0.0034 | 121.4s
+  l2_reg=0.001                | val_f1_weighted=0.7121±0.0023 | train=0.7207±0.0010 | 116.7s
+
+  ► Mejor valor para 'l2_reg': 1e-05 (val_f1_weighted=0.7138)
+
+============================================================
+Paso 7: Optimizando 'learning_rate' (3 valores)
+============================================================
+  learning_rate=0.0001               | val_f1_weighted=0.7150±0.0053 | train=0.7208±0.0019 | 192.0s ★ BEST
+  learning_rate=0.0005               | val_f1_weighted=0.7131±0.0038 | train=0.7230±0.0025 | 90.0s
+  learning_rate=0.001                | val_f1_weighted=0.7144±0.0031 | train=0.7222±0.0022 | 81.4s
+
+  ► Mejor valor para 'learning_rate': 0.0001 (val_f1_weighted=0.7150)
+
+============================================================
+Paso 8: Optimizando 'batch_size' (3 valores)
+============================================================
+  batch_size=32                   | val_f1_weighted=0.7152±0.0036 | train=0.7236±0.0031 | 303.1s ★ BEST
+  batch_size=64                   | val_f1_weighted=0.7145±0.0051 | train=0.7204±0.0016 | 233.5s
+  batch_size=128                  | val_f1_weighted=0.7154±0.0047 | train=0.7207±0.0034 | 175.0s ★ BEST
+
+  ► Mejor valor para 'batch_size': 128 (val_f1_weighted=0.7154)
+
+============================================================
+Paso 9: Optimizando 'epochs' (2 valores)
+============================================================
+  epochs=120                  | val_f1_weighted=0.7153±0.0046 | train=0.7208±0.0034 | 116.2s ★ BEST
+  epochs=200                  | val_f1_weighted=0.7153±0.0049 | train=0.7205±0.0029 | 970.4s
+
+  ► Mejor valor para 'epochs': 120 (val_f1_weighted=0.7153)
+WARNING:tensorflow:From C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'units_1': 128, 'units_2': 128, 'units_3': 32, 'dropout_1': 0.3, 'dropout_2': 0.4, 'l2_reg': 1e-05, 'learning_rate': 0.0001, 'batch_size': 128, 'epochs': 120}
+Mejor val_f1_weighted: 0.7153
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.62      0.41      0.49      3127
+           1       0.77      0.88      0.82      6873
+
+    accuracy                           0.74     10000
+   macro avg       0.69      0.65      0.66     10000
+weighted avg       0.72      0.74      0.72     10000
+
+Matriz de confusión:
+[[1282 1845]
+ [ 795 6078]]
+AUC test: 0.7626
+Accuracy en test: 0.7360
+Mejores hiperparámetros: {'units_1': 128, 'units_2': 128, 'units_3': 32, 'dropout_1': 0.3, 'dropout_2': 0.4, 'l2_reg': 1e-05, 'learning_rate': 0.0001, 'batch_size': 128, 'epochs': 120}

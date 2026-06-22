@@ -1,0 +1,75 @@
+
+============================================================
+Paso 1: Optimizando 'n_neighbors' (7 valores)
+============================================================
+  n_neighbors=3                    | val_f1_weighted=0.6722±0.0051 | train=0.8235±0.0011 | 4.5s ★ BEST
+joblib.externals.loky.process_executor._RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\process_executor.py", line 453, in _process_worker
+    call_item = call_queue.get(block=True, timeout=timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\multiprocessing\queues.py", line 108, in get
+    if not self._rlock.acquire(block, timeout):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1682, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1784, in _retrieve
+    self._raise_error_fast()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1859, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 758, in get_result
+    return self._return_or_raise()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 773, in _return_or_raise
+    raise self._result
+joblib.externals.loky.process_executor.BrokenProcessPool: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\knn_gridsearch.py", line 99, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\knn_gridsearch.py", line 68, in main
+    gs.fit(X_train, y_train)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\grid_search.py", line 104, in fit
+    cv_results = cross_validate(
+                 ^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 373, in cross_validate
+    results = parallel(
+              ^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 2072, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1732, in _get_outputs
+    self._abort()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1646, in _abort
+    backend.abort_everything(ensure_ready=ensure_ready)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\_parallel_backends.py", line 725, in abort_everything
+    self._workers.terminate(kill_workers=True)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\executor.py", line 86, in terminate
+    self.shutdown(kill_workers=kill_workers)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\process_executor.py", line 1327, in shutdown
+    self._executor_manager_thread_wakeup.wakeup()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\externals\loky\process_executor.py", line 133, in wakeup
+    self._writer.send_bytes(b"")
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\multiprocessing\connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\multiprocessing\connection.py", line 289, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

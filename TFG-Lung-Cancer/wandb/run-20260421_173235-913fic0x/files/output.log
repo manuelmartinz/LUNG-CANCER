@@ -1,0 +1,62 @@
+
+============================================================
+Paso 1: Optimizando 'kernel' (4 valores)
+============================================================
+  kernel=rbf                  | val_f1_weighted=0.6851±0.0022 | train=0.6934±0.0016 | 526.6s ★ BEST
+  kernel=linear               | val_f1_weighted=0.5599±0.0001 | train=0.5599±0.0000 | 655.7s
+  kernel=poly                 | val_f1_weighted=0.6406±0.0021 | train=0.6416±0.0016 | 665.0s
+  kernel=sigmoid              | val_f1_weighted=0.6386±0.0039 | train=0.6321±0.0021 | 600.3s
+
+  ► Mejor valor para 'kernel': rbf (val_f1_weighted=0.6851)
+
+============================================================
+Paso 2: Optimizando 'C' (3 valores)
+============================================================
+  C=0.01                 | val_f1_weighted=0.5642±0.0011 | train=0.5643±0.0010 | 654.1s ★ BEST
+  C=0.1                  | val_f1_weighted=0.6635±0.0019 | train=0.6659±0.0022 | 599.6s ★ BEST
+  C=1                    | val_f1_weighted=0.6851±0.0022 | train=0.6934±0.0016 | 639.1s ★ BEST
+
+  ► Mejor valor para 'C': 1 (val_f1_weighted=0.6851)
+
+============================================================
+Paso 3: Optimizando 'gamma' (6 valores)
+============================================================
+  gamma=scale                | val_f1_weighted=0.6851±0.0022 | train=0.6934±0.0016 | 626.4s ★ BEST
+  gamma=auto                 | val_f1_weighted=0.6850±0.0023 | train=0.6934±0.0016 | 644.4s
+  gamma=0.001                | val_f1_weighted=0.5599±0.0001 | train=0.5599±0.0000 | 644.8s
+  gamma=0.01                 | val_f1_weighted=0.6758±0.0020 | train=0.6760±0.0021 | 635.7s
+  gamma=0.1                  | val_f1_weighted=0.6861±0.0022 | train=0.6954±0.0016 | 693.8s ★ BEST
+  gamma=1                    | val_f1_weighted=0.6847±0.0030 | train=0.7468±0.0027 | 54350.0s
+
+  ► Mejor valor para 'gamma': 0.1 (val_f1_weighted=0.6861)
+
+============================================================
+Paso 4: Optimizando 'class_weight' (2 valores)
+============================================================
+  class_weight=None                 | val_f1_weighted=0.6861±0.0022 | train=0.6954±0.0016 | 676.3s ★ BEST
+  class_weight=balanced             | val_f1_weighted=0.6728±0.0039 | train=0.6873±0.0014 | 1129.5s
+
+  ► Mejor valor para 'class_weight': None (val_f1_weighted=0.6861)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'kernel': 'rbf', 'C': 1, 'gamma': 0.1, 'class_weight': None}
+Mejor val_f1_weighted: 0.6861
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.69      0.28      0.39      3127
+           1       0.74      0.94      0.83      6873
+
+    accuracy                           0.73     10000
+   macro avg       0.71      0.61      0.61     10000
+weighted avg       0.72      0.73      0.69     10000
+
+Matriz de confusión:
+[[ 864 2263]
+ [ 395 6478]]
+Mejores hiperparámetros: {'kernel': 'rbf', 'C': 1, 'gamma': 0.1, 'class_weight': None}
+Accuracy en test: 0.7342
+ROC AUC en test: 0.7239

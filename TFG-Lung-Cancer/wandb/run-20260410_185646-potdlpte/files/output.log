@@ -1,0 +1,85 @@
+
+============================================================
+Paso 1: Optimizando 'iterations' (5 valores)
+============================================================
+  iterations=100                  | val_f1_weighted=0.7138±0.0016 | train=0.7397±0.0008 | 2.7s ★ BEST
+  iterations=200                  | val_f1_weighted=0.7122±0.0034 | train=0.7510±0.0010 | 6.2s
+  iterations=500                  | val_f1_weighted=0.7137±0.0017 | train=0.7538±0.0013 | 14.2s
+  iterations=800                  | val_f1_weighted=0.7135±0.0020 | train=0.7549±0.0010 | 27.3s
+  iterations=1000                 | val_f1_weighted=0.7149±0.0027 | train=0.7560±0.0008 | 38.1s ★ BEST
+
+  ► Mejor valor para 'iterations': 1000 (val_f1_weighted=0.7149)
+
+============================================================
+Paso 2: Optimizando 'depth' (4 valores)
+============================================================
+  depth=4                    | val_f1_weighted=0.7170±0.0042 | train=0.7330±0.0007 | 25.3s ★ BEST
+  depth=6                    | val_f1_weighted=0.7149±0.0027 | train=0.7560±0.0008 | 34.5s
+  depth=8                    | val_f1_weighted=0.7078±0.0023 | train=0.7998±0.0011 | 52.6s
+  depth=10                   | val_f1_weighted=0.6995±0.0015 | train=0.8736±0.0005 | 111.5s
+
+  ► Mejor valor para 'depth': 4 (val_f1_weighted=0.7170)
+
+============================================================
+Paso 3: Optimizando 'learning_rate' (5 valores)
+============================================================
+  learning_rate=0.01                 | val_f1_weighted=0.7146±0.0040 | train=0.7180±0.0011 | 31.2s ★ BEST
+  learning_rate=0.03                 | val_f1_weighted=0.7172±0.0042 | train=0.7284±0.0003 | 39.8s ★ BEST
+  learning_rate=0.05                 | val_f1_weighted=0.7171±0.0035 | train=0.7343±0.0003 | 39.4s
+  learning_rate=0.1                  | val_f1_weighted=0.7158±0.0026 | train=0.7460±0.0006 | 62.2s
+  learning_rate=0.2                  | val_f1_weighted=0.7119±0.0023 | train=0.7634±0.0007 | 44.1s
+
+  ► Mejor valor para 'learning_rate': 0.03 (val_f1_weighted=0.7172)
+
+============================================================
+Paso 4: Optimizando 'l2_leaf_reg' (5 valores)
+============================================================
+  l2_leaf_reg=1                    | val_f1_weighted=0.7176±0.0037 | train=0.7289±0.0006 | 31.3s ★ BEST
+  l2_leaf_reg=3                    | val_f1_weighted=0.7172±0.0042 | train=0.7284±0.0003 | 64.8s
+  l2_leaf_reg=5                    | val_f1_weighted=0.7166±0.0036 | train=0.7284±0.0004 | 27.8s
+  l2_leaf_reg=7                    | val_f1_weighted=0.7167±0.0044 | train=0.7284±0.0008 | 30.4s
+  l2_leaf_reg=9                    | val_f1_weighted=0.7164±0.0040 | train=0.7279±0.0003 | 27.7s
+
+  ► Mejor valor para 'l2_leaf_reg': 1 (val_f1_weighted=0.7176)
+
+============================================================
+Paso 5: Optimizando 'border_count' (4 valores)
+============================================================
+  border_count=32                   | val_f1_weighted=0.7158±0.0052 | train=0.7255±0.0011 | 25.9s ★ BEST
+  border_count=64                   | val_f1_weighted=0.7170±0.0048 | train=0.7276±0.0012 | 29.0s ★ BEST
+  border_count=128                  | val_f1_weighted=0.7169±0.0033 | train=0.7282±0.0007 | 28.7s
+  border_count=254                  | val_f1_weighted=0.7176±0.0037 | train=0.7289±0.0006 | 29.6s ★ BEST
+
+  ► Mejor valor para 'border_count': 254 (val_f1_weighted=0.7176)
+
+============================================================
+Paso 6: Optimizando 'bagging_temperature' (4 valores)
+============================================================
+  bagging_temperature=0                    | val_f1_weighted=0.7176±0.0037 | train=0.7289±0.0006 | 28.7s ★ BEST
+  bagging_temperature=0.5                  | val_f1_weighted=0.7176±0.0037 | train=0.7289±0.0006 | 32.0s
+  bagging_temperature=1                    | val_f1_weighted=0.7176±0.0037 | train=0.7289±0.0006 | 41.9s
+  bagging_temperature=2                    | val_f1_weighted=0.7176±0.0037 | train=0.7289±0.0006 | 42.7s
+
+  ► Mejor valor para 'bagging_temperature': 0 (val_f1_weighted=0.7176)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'iterations': 1000, 'depth': 4, 'learning_rate': 0.03, 'l2_leaf_reg': 1, 'border_count': 254, 'bagging_temperature': 0}
+Mejor val_f1_weighted: 0.7176
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.64      0.40      0.50      3127
+           1       0.77      0.90      0.83      6873
+
+    accuracy                           0.74     10000
+   macro avg       0.71      0.65      0.66     10000
+weighted avg       0.73      0.74      0.72     10000
+
+Matriz de confusión:
+[[1261 1866]
+ [ 697 6176]]
+Mejores hiperparámetros: {'iterations': 1000, 'depth': 4, 'learning_rate': 0.03, 'l2_leaf_reg': 1, 'border_count': 254, 'bagging_temperature': 0}
+Accuracy en test: 0.7437

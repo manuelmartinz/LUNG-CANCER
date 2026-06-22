@@ -1,0 +1,92 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            iwatguspak0vj36xgeh8832j088x63ja:
+                args:
+                    - --data
+                    - src/data/lung_cancer_dataset.csv
+                cpu_count: 12
+                cpu_count_logical: 14
+                disk:
+                    /:
+                        total: "487490318336"
+                        used: "138715680768"
+                email: manuelmh@correo.ugr.es
+                executable: C:\Users\manum\miniconda3\envs\tfg-lung\python.exe
+                git:
+                    commit: f4c0ef2a2c809d2ce520708f76173eb1ac330df4
+                    remote: https://github.com/manuelmartinz/TFG-Lung-Cancer.git
+                host: BOOK-9AKGEL70A9
+                memory:
+                    total: "16605630464"
+                os: Windows-10-10.0.26200-SP0
+                program: -m src.models.knn_gridsearch
+                python: CPython 3.11.15
+                root: C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer
+                startedAt: "2026-04-18T17:06:23.189287Z"
+                writerId: iwatguspak0vj36xgeh8832j088x63ja
+        m: []
+        python_version: 3.11.15
+        t:
+            "1":
+                - 5
+                - 53
+            "2":
+                - 5
+                - 53
+            "3":
+                - 13
+                - 16
+            "4": 3.11.15
+            "5": 0.25.1
+            "8":
+                - 3
+            "12": 0.25.1
+            "13": windows-amd64
+drop_cols:
+    value:
+        - patient_id
+encoding:
+    value: onehot
+filepath:
+    value: src/data/lung_cancer_dataset.csv
+impute_strategy_cat:
+    value: most_frequent
+impute_strategy_num:
+    value: median
+model:
+    value: KNN
+n_rows:
+    value: null
+param_grid:
+    value:
+        leaf_size:
+            - "20"
+            - "30"
+            - "40"
+            - "50"
+        metric:
+            - minkowski
+            - manhattan
+            - euclidean
+        n_neighbors:
+            - "3"
+            - "5"
+            - "7"
+            - "9"
+            - "11"
+            - "15"
+            - "21"
+        p:
+            - "1"
+            - "2"
+        weights:
+            - uniform
+            - distance
+random_state:
+    value: 42
+scale:
+    value: true
+target_col:
+    value: lung_cancer

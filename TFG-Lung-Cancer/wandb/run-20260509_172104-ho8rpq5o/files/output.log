@@ -1,0 +1,34 @@
+
+============================================================
+Paso 1: Optimizando 'iterations' (5 valores)
+============================================================
+  iterations=100                  | val_f1_weighted=0.7171±0.0026 | train=0.7294±0.0016 | 9.7s ★ BEST
+  iterations=200                  | val_f1_weighted=0.7156±0.0019 | train=0.7362±0.0007 | 19.9s
+  iterations=500                  | val_f1_weighted=0.7154±0.0030 | train=0.7363±0.0011 | 48.4s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 121, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\catboost_gridsearch.py", line 85, in main
+    gs.fit(X_train, y_train)
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\grid_search.py", line 105, in fit
+    cv_results = cross_validate(
+                 ^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 373, in cross_validate
+    results = parallel(
+              ^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 2072, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1682, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1800, in _retrieve
+    time.sleep(0.01)
+KeyboardInterrupt

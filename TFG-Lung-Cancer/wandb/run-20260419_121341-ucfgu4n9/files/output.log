@@ -1,0 +1,119 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (5 valores)
+============================================================
+  n_estimators=10                   | val_f1_weighted=0.7071±0.0043 | train=0.7120±0.0036 | 2.7s ★ BEST
+  n_estimators=25                   | val_f1_weighted=0.7074±0.0045 | train=0.7128±0.0027 | 2.5s ★ BEST
+  n_estimators=50                   | val_f1_weighted=0.7072±0.0050 | train=0.7129±0.0029 | 2.9s
+  n_estimators=100                  | val_f1_weighted=0.7079±0.0048 | train=0.7127±0.0027 | 2.1s ★ BEST
+  n_estimators=200                  | val_f1_weighted=0.7077±0.0053 | train=0.7123±0.0024 | 4.0s
+
+  ► Mejor valor para 'n_estimators': 100 (val_f1_weighted=0.7079)
+
+============================================================
+Paso 2: Optimizando 'max_samples' (4 valores)
+============================================================
+  max_samples=0.5                  | val_f1_weighted=0.7089±0.0048 | train=0.7138±0.0023 | 1.6s ★ BEST
+  max_samples=0.7                  | val_f1_weighted=0.7082±0.0046 | train=0.7129±0.0024 | 1.9s
+  max_samples=0.9                  | val_f1_weighted=0.7081±0.0045 | train=0.7124±0.0024 | 2.2s
+  max_samples=1.0                  | val_f1_weighted=0.7079±0.0048 | train=0.7127±0.0027 | 2.2s
+
+  ► Mejor valor para 'max_samples': 0.5 (val_f1_weighted=0.7089)
+
+============================================================
+Paso 3: Optimizando 'max_features' (4 valores)
+============================================================
+  max_features=0.5                  | val_f1_weighted=0.6260±0.0034 | train=0.6297±0.0016 | 1.0s ★ BEST
+  max_features=0.7                  | val_f1_weighted=0.6782±0.0022 | train=0.6817±0.0018 | 1.3s ★ BEST
+  max_features=0.9                  | val_f1_weighted=0.6936±0.0011 | train=0.6974±0.0030 | 1.4s ★ BEST
+  max_features=1.0                  | val_f1_weighted=0.7089±0.0048 | train=0.7138±0.0023 | 1.6s ★ BEST
+
+  ► Mejor valor para 'max_features': 1.0 (val_f1_weighted=0.7089)
+
+============================================================
+Paso 4: Optimizando 'bootstrap' (2 valores)
+============================================================
+  bootstrap=True                 | val_f1_weighted=0.7089±0.0048 | train=0.7138±0.0023 | 1.7s ★ BEST
+  bootstrap=False                | val_f1_weighted=0.7067±0.0051 | train=0.7117±0.0031 | 1.9s
+
+  ► Mejor valor para 'bootstrap': True (val_f1_weighted=0.7089)
+
+============================================================
+Paso 5: Optimizando 'bootstrap_features' (2 valores)
+============================================================
+  bootstrap_features=False                | val_f1_weighted=0.7089±0.0048 | train=0.7138±0.0023 | 1.6s ★ BEST
+  bootstrap_features=True                 | val_f1_weighted=0.6604±0.0022 | train=0.6626±0.0017 | 1.6s
+
+  ► Mejor valor para 'bootstrap_features': False (val_f1_weighted=0.7089)
+
+============================================================
+Paso 6: Optimizando 'estimator__criterion' (3 valores)
+============================================================
+  estimator__criterion=gini                 | val_f1_weighted=0.7089±0.0048 | train=0.7138±0.0023 | 1.6s ★ BEST
+  estimator__criterion=entropy              | val_f1_weighted=0.7091±0.0043 | train=0.7136±0.0024 | 1.8s ★ BEST
+  estimator__criterion=log_loss             | val_f1_weighted=0.7091±0.0043 | train=0.7136±0.0024 | 2.1s
+
+  ► Mejor valor para 'estimator__criterion': entropy (val_f1_weighted=0.7091)
+
+============================================================
+Paso 7: Optimizando 'estimator__max_depth' (6 valores)
+============================================================
+  estimator__max_depth=3                    | val_f1_weighted=0.7001±0.0052 | train=0.7017±0.0036 | 1.5s ★ BEST
+  estimator__max_depth=5                    | val_f1_weighted=0.7091±0.0043 | train=0.7136±0.0024 | 2.0s ★ BEST
+  estimator__max_depth=8                    | val_f1_weighted=0.7093±0.0039 | train=0.7315±0.0012 | 2.8s ★ BEST
+  estimator__max_depth=10                   | val_f1_weighted=0.7086±0.0032 | train=0.7594±0.0013 | 3.1s
+  estimator__max_depth=15                   | val_f1_weighted=0.7036±0.0026 | train=0.8638±0.0006 | 4.0s
+  estimator__max_depth=None                 | val_f1_weighted=0.6995±0.0031 | train=0.9553±0.0011 | 4.5s
+
+  ► Mejor valor para 'estimator__max_depth': 8 (val_f1_weighted=0.7093)
+
+============================================================
+Paso 8: Optimizando 'estimator__min_samples_split' (4 valores)
+============================================================
+  estimator__min_samples_split=2                    | val_f1_weighted=0.7093±0.0039 | train=0.7315±0.0012 | 2.7s ★ BEST
+  estimator__min_samples_split=5                    | val_f1_weighted=0.7094±0.0040 | train=0.7313±0.0010 | 3.2s ★ BEST
+  estimator__min_samples_split=10                   | val_f1_weighted=0.7096±0.0043 | train=0.7309±0.0010 | 2.9s ★ BEST
+  estimator__min_samples_split=20                   | val_f1_weighted=0.7092±0.0043 | train=0.7298±0.0011 | 3.1s
+
+  ► Mejor valor para 'estimator__min_samples_split': 10 (val_f1_weighted=0.7096)
+
+============================================================
+Paso 9: Optimizando 'estimator__min_samples_leaf' (4 valores)
+============================================================
+  estimator__min_samples_leaf=1                    | val_f1_weighted=0.7096±0.0043 | train=0.7309±0.0010 | 2.8s ★ BEST
+  estimator__min_samples_leaf=2                    | val_f1_weighted=0.7094±0.0041 | train=0.7307±0.0010 | 2.9s
+  estimator__min_samples_leaf=4                    | val_f1_weighted=0.7092±0.0034 | train=0.7309±0.0011 | 3.3s
+  estimator__min_samples_leaf=8                    | val_f1_weighted=0.7088±0.0029 | train=0.7303±0.0009 | 3.1s
+
+  ► Mejor valor para 'estimator__min_samples_leaf': 1 (val_f1_weighted=0.7096)
+
+============================================================
+Paso 10: Optimizando 'estimator__class_weight' (2 valores)
+============================================================
+  estimator__class_weight=None                 | val_f1_weighted=0.7096±0.0043 | train=0.7309±0.0010 | 2.7s ★ BEST
+  estimator__class_weight=balanced             | val_f1_weighted=0.6991±0.0060 | train=0.7201±0.0026 | 3.4s
+
+  ► Mejor valor para 'estimator__class_weight': None (val_f1_weighted=0.7096)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'n_estimators': 100, 'max_samples': 0.5, 'max_features': 1.0, 'bootstrap': True, 'bootstrap_features': False, 'estimator__criterion': 'entropy', 'estimator__max_depth': 8, 'estimator__min_samples_split': 10, 'estimator__min_samples_leaf': 1, 'estimator__class_weight': None}
+Mejor val_f1_weighted: 0.7096
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.65      0.37      0.47      3127
+           1       0.76      0.91      0.83      6873
+
+    accuracy                           0.74     10000
+   macro avg       0.71      0.64      0.65     10000
+weighted avg       0.73      0.74      0.72     10000
+
+Matriz de confusión:
+[[1146 1981]
+ [ 605 6268]]
+Mejores hiperparámetros: {'n_estimators': 100, 'max_samples': 0.5, 'max_features': 1.0, 'bootstrap': True, 'bootstrap_features': False, 'estimator__criterion': 'entropy', 'estimator__max_depth': 8, 'estimator__min_samples_split': 10, 'estimator__min_samples_leaf': 1, 'estimator__class_weight': None}
+Accuracy en test: 0.7414
+ROC AUC en test: 0.7692

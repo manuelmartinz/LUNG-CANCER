@@ -1,0 +1,46 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (5 valores)
+============================================================
+  n_estimators=50                   | val_f1_weighted=0.7117±0.0044 | train=0.7222±0.0029 | 8.4s ★ BEST
+  n_estimators=100                  | val_f1_weighted=0.7118±0.0043 | train=0.7225±0.0029 | 17.5s ★ BEST
+  n_estimators=200                  | val_f1_weighted=0.7113±0.0041 | train=0.7230±0.0024 | 12.0s
+  n_estimators=300                  | val_f1_weighted=0.7118±0.0043 | train=0.7240±0.0026 | 13.7s
+  n_estimators=500                  | val_f1_weighted=0.7118±0.0042 | train=0.7242±0.0025 | 56.8s ★ BEST
+
+  ► Mejor valor para 'n_estimators': 500 (val_f1_weighted=0.7118)
+
+============================================================
+Paso 2: Optimizando 'learning_rate' (6 valores)
+============================================================
+  learning_rate=0.001                | val_f1_weighted=0.7099±0.0044 | train=0.7140±0.0015 | 23.7s ★ BEST
+  learning_rate=0.01                 | val_f1_weighted=0.7124±0.0052 | train=0.7211±0.0012 | 23.2s ★ BEST
+  learning_rate=0.05                 | val_f1_weighted=0.7190±0.0032 | train=0.7263±0.0010 | 24.1s ★ BEST
+  learning_rate=0.1                  | val_f1_weighted=0.7182±0.0027 | train=0.7262±0.0010 | 26.7s
+  learning_rate=0.5                  | val_f1_weighted=0.7184±0.0026 | train=0.7270±0.0010 | 24.4s
+  learning_rate=1.0                  | val_f1_weighted=0.7118±0.0042 | train=0.7242±0.0025 | 25.2s
+
+  ► Mejor valor para 'learning_rate': 0.05 (val_f1_weighted=0.7190)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'n_estimators': 500, 'learning_rate': 0.05}
+Mejor val_f1_weighted: 0.7190
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.65      0.42      0.51      3127
+           1       0.77      0.90      0.83      6873
+
+    accuracy                           0.75     10000
+   macro avg       0.71      0.66      0.67     10000
+weighted avg       0.73      0.75      0.73     10000
+
+Matriz de confusión:
+[[1302 1825]
+ [ 708 6165]]
+Mejores hiperparámetros: {'n_estimators': 500, 'learning_rate': 0.05}
+Accuracy en test: 0.7467
+ROC AUC en test: 0.7734

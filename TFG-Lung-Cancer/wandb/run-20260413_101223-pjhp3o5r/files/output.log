@@ -1,0 +1,17 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (4 valores)
+============================================================
+  n_estimators=50                   | val_f1_weighted=0.6755±0.0072 | train=1.0000±0.0000 | 3.4s ★ BEST
+  n_estimators=100                  | val_f1_weighted=0.6753±0.0070 | train=1.0000±0.0000 | 5.2s
+  n_estimators=200                  | val_f1_weighted=0.6760±0.0064 | train=1.0000±0.0000 | 11.5s ★ BEST
+  n_estimators=300                  | val_f1_weighted=0.6763±0.0065 | train=1.0000±0.0000 | 21.3s ★ BEST
+
+  ► Mejor valor para 'n_estimators': 300 (val_f1_weighted=0.6763)
+
+============================================================
+Paso 2: Optimizando 'max_depth' (6 valores)
+============================================================
+  max_depth=5                    | val_f1_weighted=0.6180±0.0022 | train=0.6192±0.0013 | 3.7s ★ BEST
+  max_depth=10                   | val_f1_weighted=0.6864±0.0019 | train=0.7192±0.0023 | 7.6s ★ BEST
+  max_depth=15                   | val_f1_weighted=0.6896±0.0071 | train=0.9584±0.0008 | 10.5s ★ BEST

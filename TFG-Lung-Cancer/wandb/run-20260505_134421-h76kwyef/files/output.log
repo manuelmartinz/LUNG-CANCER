@@ -1,0 +1,97 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (5 valores)
+============================================================
+  n_estimators=50                   | val_accuracy=0.6991±0.0041 | train=0.9995±0.0001 | 3.0s ★ BEST
+  n_estimators=100                  | val_accuracy=0.7005±0.0045 | train=1.0000±0.0000 | 3.4s ★ BEST
+  n_estimators=200                  | val_accuracy=0.7023±0.0050 | train=1.0000±0.0000 | 5.0s ★ BEST
+  n_estimators=300                  | val_accuracy=0.7021±0.0044 | train=1.0000±0.0000 | 5.9s
+  n_estimators=500                  | val_accuracy=0.7029±0.0039 | train=1.0000±0.0000 | 12.4s ★ BEST
+
+  ► Mejor valor para 'n_estimators': 500 (val_accuracy=0.7029)
+[34m[1mwandb[0m: [33mWARNING[0m A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+
+============================================================
+Paso 2: Optimizando 'max_depth' (6 valores)
+============================================================
+  max_depth=5                    | val_accuracy=0.7362±0.0039 | train=0.7386±0.0012 | 4.0s ★ BEST
+  max_depth=10                   | val_accuracy=0.7342±0.0041 | train=0.7810±0.0004 | 5.9s
+  max_depth=15                   | val_accuracy=0.7178±0.0037 | train=0.9377±0.0008 | 8.7s
+  max_depth=20                   | val_accuracy=0.7042±0.0048 | train=1.0000±0.0000 | 12.0s
+  max_depth=30                   | val_accuracy=0.7029±0.0041 | train=1.0000±0.0000 | 11.8s
+  max_depth=None                 | val_accuracy=0.7029±0.0039 | train=1.0000±0.0000 | 12.1s
+
+  ► Mejor valor para 'max_depth': 5 (val_accuracy=0.7362)
+
+============================================================
+Paso 3: Optimizando 'min_samples_split' (4 valores)
+============================================================
+  min_samples_split=2                    | val_accuracy=0.7362±0.0039 | train=0.7386±0.0012 | 5.0s ★ BEST
+  min_samples_split=5                    | val_accuracy=0.7362±0.0039 | train=0.7385±0.0012 | 5.0s
+  min_samples_split=10                   | val_accuracy=0.7362±0.0039 | train=0.7385±0.0012 | 5.0s
+  min_samples_split=20                   | val_accuracy=0.7363±0.0036 | train=0.7386±0.0012 | 5.0s ★ BEST
+
+  ► Mejor valor para 'min_samples_split': 20 (val_accuracy=0.7363)
+[34m[1mwandb[0m: [33mWARNING[0m A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+[34m[1mwandb[0m: [33mWARNING[0m A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+
+============================================================
+Paso 4: Optimizando 'min_samples_leaf' (4 valores)
+============================================================
+  min_samples_leaf=1                    | val_accuracy=0.7363±0.0036 | train=0.7386±0.0012 | 4.0s ★ BEST
+  min_samples_leaf=2                    | val_accuracy=0.7362±0.0036 | train=0.7385±0.0011 | 3.9s
+  min_samples_leaf=4                    | val_accuracy=0.7361±0.0037 | train=0.7385±0.0012 | 3.8s
+  min_samples_leaf=8                    | val_accuracy=0.7361±0.0037 | train=0.7386±0.0012 | 3.9s
+
+  ► Mejor valor para 'min_samples_leaf': 1 (val_accuracy=0.7363)
+
+============================================================
+Paso 5: Optimizando 'max_features' (5 valores)
+============================================================
+  max_features=sqrt                 | val_accuracy=0.7363±0.0036 | train=0.7386±0.0012 | 4.9s ★ BEST
+  max_features=log2                 | val_accuracy=0.7363±0.0036 | train=0.7386±0.0012 | 5.1s
+  max_features=0.3                  | val_accuracy=0.7312±0.0035 | train=0.7337±0.0016 | 4.2s
+  max_features=0.5                  | val_accuracy=0.7362±0.0034 | train=0.7385±0.0006 | 7.7s
+  max_features=0.7                  | val_accuracy=0.7365±0.0041 | train=0.7392±0.0011 | 10.7s ★ BEST
+
+  ► Mejor valor para 'max_features': 0.7 (val_accuracy=0.7365)
+
+============================================================
+Paso 6: Optimizando 'criterion' (2 valores)
+============================================================
+  criterion=gini                 | val_accuracy=0.7365±0.0041 | train=0.7392±0.0011 | 7.9s ★ BEST
+  criterion=entropy              | val_accuracy=0.7363±0.0038 | train=0.7389±0.0009 | 8.9s
+
+  ► Mejor valor para 'criterion': gini (val_accuracy=0.7365)
+
+============================================================
+Paso 7: Optimizando 'class_weight' (3 valores)
+============================================================
+  class_weight=None                 | val_accuracy=0.7365±0.0041 | train=0.7392±0.0011 | 8.1s ★ BEST
+  class_weight=balanced             | val_accuracy=0.6840±0.0028 | train=0.6851±0.0047 | 8.1s
+  class_weight=balanced_subsample   | val_accuracy=0.6834±0.0027 | train=0.6845±0.0042 | 10.0s
+
+  ► Mejor valor para 'class_weight': None (val_accuracy=0.7365)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'n_estimators': 500, 'max_depth': 5, 'min_samples_split': 20, 'min_samples_leaf': 1, 'max_features': 0.7, 'criterion': 'gini', 'class_weight': None}
+Mejor val_accuracy: 0.7365
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.65      0.36      0.46      3127
+           1       0.76      0.91      0.83      6873
+
+    accuracy                           0.74     10000
+   macro avg       0.70      0.64      0.65     10000
+weighted avg       0.72      0.74      0.71     10000
+
+Matriz de confusión:
+[[1124 2003]
+ [ 603 6270]]
+Mejores hiperparámetros: {'n_estimators': 500, 'max_depth': 5, 'min_samples_split': 20, 'min_samples_leaf': 1, 'max_features': 0.7, 'criterion': 'gini', 'class_weight': None}
+Accuracy en test: 0.7394
+ROC AUC en test: 0.7663

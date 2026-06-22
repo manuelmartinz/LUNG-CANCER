@@ -1,0 +1,49 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (5 valores)
+============================================================
+  n_estimators=50                   | val_accuracy=0.6971±0.0046 | train=0.9995±0.0002 | 4.9s ★ BEST
+  n_estimators=100                  | val_accuracy=0.6981±0.0053 | train=1.0000±0.0000 | 6.5s ★ BEST
+  n_estimators=200                  | val_accuracy=0.6984±0.0057 | train=1.0000±0.0000 | 9.4s ★ BEST
+  n_estimators=300                  | val_accuracy=0.6985±0.0053 | train=1.0000±0.0000 | 11.2s ★ BEST
+  n_estimators=500                  | val_accuracy=0.6996±0.0052 | train=1.0000±0.0000 | 21.4s ★ BEST
+
+  ► Mejor valor para 'n_estimators': 500 (val_accuracy=0.6996)
+
+============================================================
+Paso 2: Optimizando 'max_depth' (6 valores)
+============================================================
+  max_depth=5                    | val_accuracy=0.7319±0.0037 | train=0.7343±0.0010 | 9.6s ★ BEST
+  max_depth=10                   | val_accuracy=0.7346±0.0033 | train=0.7812±0.0012 | 11.1s ★ BEST
+  max_depth=15                   | val_accuracy=0.7133±0.0052 | train=0.9493±0.0009 | 14.4s
+  max_depth=20                   | val_accuracy=0.7011±0.0066 | train=1.0000±0.0000 | 17.7s
+  max_depth=30                   | val_accuracy=0.6992±0.0051 | train=1.0000±0.0000 | 17.4s
+  max_depth=None                 | val_accuracy=0.6996±0.0052 | train=1.0000±0.0000 | 17.1s
+
+  ► Mejor valor para 'max_depth': 10 (val_accuracy=0.7346)
+
+============================================================
+Paso 3: Optimizando 'min_samples_split' (4 valores)
+============================================================
+  min_samples_split=2                    | val_accuracy=0.7346±0.0033 | train=0.7812±0.0012 | 11.9s ★ BEST
+  min_samples_split=5                    | val_accuracy=0.7347±0.0030 | train=0.7797±0.0013 | 11.3s ★ BEST
+  min_samples_split=10                   | val_accuracy=0.7348±0.0022 | train=0.7764±0.0013 | 11.3s ★ BEST
+  min_samples_split=20                   | val_accuracy=0.7353±0.0035 | train=0.7711±0.0009 | 11.1s ★ BEST
+
+  ► Mejor valor para 'min_samples_split': 20 (val_accuracy=0.7353)
+
+============================================================
+Paso 4: Optimizando 'min_samples_leaf' (4 valores)
+============================================================
+  min_samples_leaf=1                    | val_accuracy=0.7353±0.0035 | train=0.7711±0.0009 | 13.7s ★ BEST
+  min_samples_leaf=2                    | val_accuracy=0.7345±0.0027 | train=0.7706±0.0009 | 17209.1s
+  min_samples_leaf=4                    | val_accuracy=0.7350±0.0029 | train=0.7694±0.0009 | 17.9s
+  min_samples_leaf=8                    | val_accuracy=0.7355±0.0027 | train=0.7669±0.0005 | 26.5s ★ BEST
+
+  ► Mejor valor para 'min_samples_leaf': 8 (val_accuracy=0.7355)
+[34m[1mwandb[0m: [33mWARNING[0m A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+
+============================================================
+Paso 5: Optimizando 'max_features' (5 valores)
+============================================================
+  max_features=sqrt                 | val_accuracy=0.7355±0.0027 | train=0.7669±0.0005 | 17.6s ★ BEST

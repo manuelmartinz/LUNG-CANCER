@@ -1,0 +1,37 @@
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_setup.py:_flush():81] Configure stats pid to 34376
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_init.py:setup_run_log_directory():717] Logging user logs to C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\wandb\run-20260508_172136-1uio78ip\logs\debug.log
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\wandb\run-20260508_172136-1uio78ip\logs\debug-internal.log
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_init.py:init():844] calling init triggers
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'model': 'HistGradientBoosting', 'param_grid': {'max_iter': ['50', '100', '200', '300', '500'], 'learning_rate': ['0.01', '0.05', '0.1', '0.2', '0.3'], 'max_depth': ['3', '5', '7', '10', 'None'], 'min_samples_leaf': ['1', '2', '4', '8'], 'max_leaf_nodes': ['15', '31', '63'], 'max_bins': ['64', '128', '255']}, 'filepath': 'src/data/lung_cancer_dataset.csv', 'target_col': 'lung_cancer', 'drop_cols': ['patient_id'], 'n_rows': None, 'encoding': 'onehot', 'scale': True, 'impute_strategy_num': 'median', 'impute_strategy_cat': 'most_frequent', 'random_state': 42, '_wandb': {}}
+2026-05-08 17:21:36,564 INFO    MainThread:34376 [wandb_init.py:init():892] starting backend
+2026-05-08 17:21:38,811 WARNING MainThread:34376 [wandb_init.py:init():1587] [no run ID] interrupted
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\wandb\sdk\wandb_init.py", line 1578, in init
+    run = wi.init(run_settings, run_config, run_printer)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\wandb\sdk\wandb_init.py", line 894, in init
+    service = self._wl.ensure_service()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\wandb\sdk\wandb_setup.py", line 387, in ensure_service
+    self._connection = service_connection.connect_to_service(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\wandb\sdk\lib\service\service_connection.py", line 51, in connect_to_service
+    return _start_and_connect_service(asyncer, settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\wandb\sdk\lib\service\service_connection.py", line 66, in _start_and_connect_service
+    client = proc.token.connect(asyncer=asyncer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\wandb\sdk\lib\service\service_token.py", line 151, in connect
+    reader, writer = asyncer.run(
+                     ^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 137, in run
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\concurrent\futures\_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\threading.py", line 327, in wait
+    waiter.acquire()
+KeyboardInterrupt

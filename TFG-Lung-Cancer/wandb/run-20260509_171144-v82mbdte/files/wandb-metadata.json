@@ -1,0 +1,30 @@
+{
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "CPython 3.11.15",
+  "startedAt": "2026-05-09T15:11:44.791405Z",
+  "args": [
+    "--data",
+    "src/data/lung_cancer_dataset.csv"
+  ],
+  "program": "-m src.models.xgboost_gridsearch",
+  "git": {
+    "remote": "https://github.com/manuelmartinz/TFG-Lung-Cancer.git",
+    "commit": "7eacab6c3d916b868b043c7ba010a4bcaff723b1"
+  },
+  "email": "manuelmh@correo.ugr.es",
+  "root": "C:\\Users\\manum\\OneDrive\\Desktop\\TFG-Lung-Cancer",
+  "host": "BOOK-9AKGEL70A9",
+  "executable": "C:\\Users\\manum\\miniconda3\\envs\\tfg-lung\\python.exe",
+  "cpu_count": 12,
+  "cpu_count_logical": 14,
+  "disk": {
+    "/": {
+      "total": "487490318336",
+      "used": "148115091456"
+    }
+  },
+  "memory": {
+    "total": "16605630464"
+  },
+  "writerId": "fjuaka5ivb168ac12erb15ko269z6fup"
+}

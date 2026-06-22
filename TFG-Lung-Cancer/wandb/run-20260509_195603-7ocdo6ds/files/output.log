@@ -1,0 +1,176 @@
+
+============================================================
+Paso 1: Optimizando 'voting' (2 valores)
+============================================================
+C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py:490: FitFailedWarning:
+1 fits failed out of a total of 5.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+1 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\model_selection\_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\ensemble\_voting.py", line 405, in fit
+    return super().fit(X, transformed_y, **fit_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\ensemble\_voting.py", line 99, in fit
+    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1986, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\joblib\parallel.py", line 1914, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\utils\parallel.py", line 184, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\sklearn\ensemble\_base.py", line 45, in _fit_single_estimator
+    estimator.fit(X, y, **fit_params)
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\catboost\core.py", line 5547, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, graph, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\catboost\core.py", line 2716, in _fit
+    self._train(
+  File "C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\catboost\core.py", line 1824, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 5430, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 5479, in _catboost._CatBoost._train
+_catboost.CatBoostError: catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: catboost_info
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+  voting=hard                 | val_f1_weighted=nan±nan | train=nan±nan | 15.9s
+  voting=soft                 | val_f1_weighted=0.7145±0.0032 | train=0.7205±0.0014 | 13.3s ★ BEST
+
+  ► Mejor valor para 'voting': soft (val_f1_weighted=0.7145)
+0:	learn: 0.6433269	total: 111ms	remaining: 11s
+1:	learn: 0.6113493	total: 116ms	remaining: 5.66s
+2:	learn: 0.5891152	total: 120ms	remaining: 3.88s
+3:	learn: 0.5740073	total: 125ms	remaining: 2.99s
+4:	learn: 0.5627924	total: 129ms	remaining: 2.46s
+5:	learn: 0.5546976	total: 134ms	remaining: 2.1s
+6:	learn: 0.5471643	total: 138ms	remaining: 1.83s
+7:	learn: 0.5416549	total: 143ms	remaining: 1.64s
+8:	learn: 0.5378876	total: 148ms	remaining: 1.5s
+9:	learn: 0.5336514	total: 152ms	remaining: 1.37s
+10:	learn: 0.5305070	total: 156ms	remaining: 1.26s
+11:	learn: 0.5285652	total: 161ms	remaining: 1.18s
+12:	learn: 0.5265379	total: 164ms	remaining: 1.1s
+13:	learn: 0.5250193	total: 167ms	remaining: 1.02s
+14:	learn: 0.5236813	total: 170ms	remaining: 962ms
+15:	learn: 0.5224373	total: 173ms	remaining: 910ms
+16:	learn: 0.5216005	total: 176ms	remaining: 861ms
+17:	learn: 0.5208098	total: 179ms	remaining: 816ms
+18:	learn: 0.5201521	total: 182ms	remaining: 775ms
+19:	learn: 0.5193570	total: 185ms	remaining: 741ms
+20:	learn: 0.5186278	total: 188ms	remaining: 708ms
+21:	learn: 0.5179626	total: 191ms	remaining: 679ms
+22:	learn: 0.5175668	total: 194ms	remaining: 651ms
+23:	learn: 0.5172856	total: 198ms	remaining: 626ms
+24:	learn: 0.5169299	total: 201ms	remaining: 602ms
+25:	learn: 0.5165011	total: 203ms	remaining: 579ms
+26:	learn: 0.5163238	total: 206ms	remaining: 557ms
+27:	learn: 0.5159466	total: 209ms	remaining: 536ms
+28:	learn: 0.5157494	total: 212ms	remaining: 518ms
+29:	learn: 0.5156508	total: 214ms	remaining: 500ms
+30:	learn: 0.5155249	total: 217ms	remaining: 483ms
+31:	learn: 0.5153582	total: 220ms	remaining: 467ms
+32:	learn: 0.5151809	total: 223ms	remaining: 452ms
+33:	learn: 0.5150992	total: 226ms	remaining: 439ms
+34:	learn: 0.5149695	total: 229ms	remaining: 425ms
+35:	learn: 0.5148082	total: 231ms	remaining: 411ms
+36:	learn: 0.5147490	total: 234ms	remaining: 398ms
+37:	learn: 0.5146533	total: 237ms	remaining: 386ms
+38:	learn: 0.5144985	total: 239ms	remaining: 375ms
+39:	learn: 0.5143503	total: 242ms	remaining: 363ms
+40:	learn: 0.5142015	total: 245ms	remaining: 352ms
+41:	learn: 0.5141048	total: 247ms	remaining: 342ms
+42:	learn: 0.5139972	total: 250ms	remaining: 331ms
+43:	learn: 0.5139160	total: 253ms	remaining: 322ms
+44:	learn: 0.5138106	total: 256ms	remaining: 313ms
+45:	learn: 0.5137514	total: 259ms	remaining: 303ms
+46:	learn: 0.5136478	total: 261ms	remaining: 295ms
+47:	learn: 0.5134835	total: 264ms	remaining: 286ms
+48:	learn: 0.5134367	total: 267ms	remaining: 278ms
+49:	learn: 0.5133370	total: 270ms	remaining: 270ms
+50:	learn: 0.5132541	total: 272ms	remaining: 262ms
+51:	learn: 0.5131524	total: 275ms	remaining: 254ms
+52:	learn: 0.5130622	total: 278ms	remaining: 246ms
+53:	learn: 0.5130017	total: 281ms	remaining: 239ms
+54:	learn: 0.5129153	total: 283ms	remaining: 232ms
+55:	learn: 0.5128113	total: 286ms	remaining: 225ms
+56:	learn: 0.5127078	total: 289ms	remaining: 218ms
+57:	learn: 0.5126096	total: 292ms	remaining: 211ms
+58:	learn: 0.5125434	total: 295ms	remaining: 205ms
+59:	learn: 0.5124754	total: 298ms	remaining: 198ms
+60:	learn: 0.5123845	total: 300ms	remaining: 192ms
+61:	learn: 0.5122414	total: 303ms	remaining: 186ms
+62:	learn: 0.5121646	total: 306ms	remaining: 180ms
+63:	learn: 0.5120915	total: 309ms	remaining: 174ms
+64:	learn: 0.5119743	total: 311ms	remaining: 168ms
+65:	learn: 0.5118855	total: 314ms	remaining: 162ms
+66:	learn: 0.5117896	total: 316ms	remaining: 156ms
+67:	learn: 0.5117234	total: 319ms	remaining: 150ms
+68:	learn: 0.5116462	total: 322ms	remaining: 145ms
+69:	learn: 0.5115445	total: 325ms	remaining: 139ms
+70:	learn: 0.5114500	total: 327ms	remaining: 134ms
+71:	learn: 0.5113575	total: 330ms	remaining: 128ms
+72:	learn: 0.5112813	total: 333ms	remaining: 123ms
+73:	learn: 0.5111640	total: 336ms	remaining: 118ms
+74:	learn: 0.5110935	total: 338ms	remaining: 113ms
+75:	learn: 0.5110058	total: 341ms	remaining: 108ms
+76:	learn: 0.5109359	total: 344ms	remaining: 103ms
+77:	learn: 0.5108857	total: 347ms	remaining: 97.9ms
+78:	learn: 0.5108267	total: 349ms	remaining: 92.9ms
+79:	learn: 0.5107487	total: 352ms	remaining: 88ms
+80:	learn: 0.5106965	total: 355ms	remaining: 83.2ms
+81:	learn: 0.5106460	total: 357ms	remaining: 78.4ms
+82:	learn: 0.5105610	total: 360ms	remaining: 73.8ms
+83:	learn: 0.5104901	total: 363ms	remaining: 69.1ms
+84:	learn: 0.5104316	total: 366ms	remaining: 64.5ms
+85:	learn: 0.5103655	total: 368ms	remaining: 59.9ms
+86:	learn: 0.5102966	total: 371ms	remaining: 55.5ms
+87:	learn: 0.5102438	total: 374ms	remaining: 51.1ms
+88:	learn: 0.5101891	total: 377ms	remaining: 46.6ms
+89:	learn: 0.5100738	total: 380ms	remaining: 42.2ms
+90:	learn: 0.5100093	total: 382ms	remaining: 37.8ms
+91:	learn: 0.5099649	total: 385ms	remaining: 33.5ms
+92:	learn: 0.5098960	total: 388ms	remaining: 29.2ms
+93:	learn: 0.5098229	total: 391ms	remaining: 24.9ms
+94:	learn: 0.5097586	total: 393ms	remaining: 20.7ms
+95:	learn: 0.5096749	total: 396ms	remaining: 16.5ms
+96:	learn: 0.5096311	total: 399ms	remaining: 12.3ms
+97:	learn: 0.5095836	total: 401ms	remaining: 8.19ms
+98:	learn: 0.5094992	total: 404ms	remaining: 4.08ms
+99:	learn: 0.5094523	total: 406ms	remaining: 0us
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'voting': 'soft'}
+Mejor val_f1_weighted: 0.7145
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.65      0.40      0.49      3127
+           1       0.77      0.90      0.83      6873
+
+    accuracy                           0.75     10000
+   macro avg       0.71      0.65      0.66     10000
+weighted avg       0.73      0.75      0.72     10000
+
+Matriz de confusión:
+[[1243 1884]
+ [ 664 6209]]
+Mejores hiperparámetros: {'voting': 'soft'}
+Accuracy en test: 0.7452
+ROC AUC en test: 0.7764

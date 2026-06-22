@@ -1,0 +1,86 @@
+
+============================================================
+Paso 1: Optimizando 'criterion' (3 valores)
+============================================================
+  criterion=gini                 | val_f1_weighted=0.6507±0.0038 | train=1.0000±0.0000 | 2.2s ★ BEST
+  criterion=entropy              | val_f1_weighted=0.6504±0.0035 | train=1.0000±0.0000 | 1.8s
+  criterion=log_loss             | val_f1_weighted=0.6504±0.0035 | train=1.0000±0.0000 | 1.6s
+
+  ► Mejor valor para 'criterion': gini (val_f1_weighted=0.6507)
+
+============================================================
+Paso 2: Optimizando 'max_depth' (8 valores)
+============================================================
+  max_depth=3                    | val_f1_weighted=0.6931±0.0028 | train=0.6941±0.0015 | 0.2s ★ BEST
+  max_depth=5                    | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s ★ BEST
+  max_depth=8                    | val_f1_weighted=0.7027±0.0033 | train=0.7266±0.0019 | 0.2s
+  max_depth=10                   | val_f1_weighted=0.6938±0.0028 | train=0.7523±0.0023 | 0.2s
+  max_depth=15                   | val_f1_weighted=0.6715±0.0039 | train=0.8696±0.0022 | 0.2s
+  max_depth=20                   | val_f1_weighted=0.6555±0.0043 | train=0.9626±0.0025 | 0.2s
+  max_depth=30                   | val_f1_weighted=0.6501±0.0031 | train=0.9990±0.0006 | 0.2s
+  max_depth=None                 | val_f1_weighted=0.6507±0.0038 | train=1.0000±0.0000 | 0.2s
+
+  ► Mejor valor para 'max_depth': 5 (val_f1_weighted=0.7075)
+
+============================================================
+Paso 3: Optimizando 'min_samples_split' (4 valores)
+============================================================
+  min_samples_split=2                    | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s ★ BEST
+  min_samples_split=5                    | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s
+  min_samples_split=10                   | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s
+  min_samples_split=20                   | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s
+
+  ► Mejor valor para 'min_samples_split': 2 (val_f1_weighted=0.7075)
+
+============================================================
+Paso 4: Optimizando 'min_samples_leaf' (4 valores)
+============================================================
+  min_samples_leaf=1                    | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s ★ BEST
+  min_samples_leaf=2                    | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s
+  min_samples_leaf=4                    | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.1s
+  min_samples_leaf=8                    | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.1s
+
+  ► Mejor valor para 'min_samples_leaf': 1 (val_f1_weighted=0.7075)
+
+============================================================
+Paso 5: Optimizando 'max_features' (6 valores)
+============================================================
+  max_features=None                 | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.1s ★ BEST
+  max_features=sqrt                 | val_f1_weighted=0.6488±0.0042 | train=0.6505±0.0058 | 0.1s
+  max_features=log2                 | val_f1_weighted=0.6488±0.0042 | train=0.6505±0.0058 | 0.1s
+  max_features=0.3                  | val_f1_weighted=0.6488±0.0042 | train=0.6505±0.0058 | 0.1s
+  max_features=0.5                  | val_f1_weighted=0.6974±0.0047 | train=0.6989±0.0050 | 0.1s
+  max_features=0.7                  | val_f1_weighted=0.7064±0.0030 | train=0.7099±0.0020 | 0.1s
+
+  ► Mejor valor para 'max_features': None (val_f1_weighted=0.7075)
+
+============================================================
+Paso 6: Optimizando 'class_weight' (2 valores)
+============================================================
+  class_weight=None                 | val_f1_weighted=0.7075±0.0046 | train=0.7107±0.0017 | 0.2s ★ BEST
+  class_weight=balanced             | val_f1_weighted=0.6946±0.0038 | train=0.6983±0.0024 | 0.2s
+
+  ► Mejor valor para 'class_weight': None (val_f1_weighted=0.7075)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'criterion': 'gini', 'max_depth': 5, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': None, 'class_weight': None}
+Mejor val_f1_weighted: 0.7075
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.64      0.37      0.47      3127
+           1       0.76      0.91      0.83      6873
+
+    accuracy                           0.74     10000
+   macro avg       0.70      0.64      0.65     10000
+weighted avg       0.72      0.74      0.71     10000
+
+Matriz de confusión:
+[[1150 1977]
+ [ 643 6230]]
+Mejores hiperparámetros: {'criterion': 'gini', 'max_depth': 5, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': None, 'class_weight': None}
+Accuracy en test: 0.7380
+ROC AUC en test: 0.7509

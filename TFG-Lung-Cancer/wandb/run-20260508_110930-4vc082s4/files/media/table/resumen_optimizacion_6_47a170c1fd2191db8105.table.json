@@ -1,0 +1,1 @@
+{"columns": ["step", "param_name", "best_value", "best_val_score"], "data": [[1, "max_iter", "100", 0.7129284593289551], [2, "learning_rate", "0.2", 0.7155021025093304], [3, "max_depth", "3", 0.7166648688291359], [4, "min_samples_leaf", "1", 0.716589776452375], [5, "max_leaf_nodes", "15", 0.716589776452375], [6, "max_bins", "64", 0.7176816525262824]]}

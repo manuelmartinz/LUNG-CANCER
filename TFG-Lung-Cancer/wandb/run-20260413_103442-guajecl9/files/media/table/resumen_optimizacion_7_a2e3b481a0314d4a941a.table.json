@@ -1,0 +1,1 @@
+{"columns": ["step", "param_name", "best_value", "best_val_score"], "data": [[1, "n_estimators", "500", 0.69955], [2, "max_depth", "10", 0.734575], [3, "min_samples_split", "20", 0.735275], [4, "min_samples_leaf", "8", 0.735475], [5, "max_features", "sqrt", 0.735475], [6, "criterion", "gini", 0.735475], [7, "class_weight", "None", 0.735475]]}

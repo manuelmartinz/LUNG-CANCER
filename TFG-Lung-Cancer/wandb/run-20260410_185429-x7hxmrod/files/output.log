@@ -1,0 +1,93 @@
+
+============================================================
+Paso 1: Optimizando 'max_iter' (5 valores)
+============================================================
+  max_iter=50                   | val_f1_weighted=0.7118±0.0048 | train=0.7229±0.0012 | 2.2s ★ BEST
+  max_iter=100                  | val_f1_weighted=0.7129±0.0054 | train=0.7294±0.0030 | 2.0s ★ BEST
+  max_iter=200                  | val_f1_weighted=0.7129±0.0054 | train=0.7294±0.0030 | 1.7s
+  max_iter=300                  | val_f1_weighted=0.7129±0.0054 | train=0.7294±0.0030 | 0.7s
+  max_iter=500                  | val_f1_weighted=0.7129±0.0054 | train=0.7294±0.0030 | 0.7s
+
+  ► Mejor valor para 'max_iter': 100 (val_f1_weighted=0.7129)
+
+============================================================
+Paso 2: Optimizando 'learning_rate' (5 valores)
+============================================================
+  learning_rate=0.01                 | val_f1_weighted=0.6690±0.0026 | train=0.6696±0.0016 | 0.9s ★ BEST
+  learning_rate=0.05                 | val_f1_weighted=0.7123±0.0041 | train=0.7228±0.0009 | 0.8s ★ BEST
+  learning_rate=0.1                  | val_f1_weighted=0.7129±0.0054 | train=0.7294±0.0030 | 0.6s ★ BEST
+  learning_rate=0.2                  | val_f1_weighted=0.7155±0.0033 | train=0.7330±0.0034 | 0.4s ★ BEST
+  learning_rate=0.3                  | val_f1_weighted=0.7123±0.0031 | train=0.7340±0.0029 | 0.4s
+
+  ► Mejor valor para 'learning_rate': 0.2 (val_f1_weighted=0.7155)
+
+============================================================
+Paso 3: Optimizando 'max_depth' (5 valores)
+============================================================
+  max_depth=3                    | val_f1_weighted=0.7167±0.0042 | train=0.7239±0.0007 | 0.5s ★ BEST
+  max_depth=5                    | val_f1_weighted=0.7148±0.0025 | train=0.7306±0.0017 | 0.4s
+  max_depth=7                    | val_f1_weighted=0.7138±0.0028 | train=0.7318±0.0036 | 0.5s
+  max_depth=10                   | val_f1_weighted=0.7129±0.0047 | train=0.7319±0.0046 | 0.4s
+  max_depth=None                 | val_f1_weighted=0.7155±0.0033 | train=0.7330±0.0034 | 0.4s
+
+  ► Mejor valor para 'max_depth': 3 (val_f1_weighted=0.7167)
+
+============================================================
+Paso 4: Optimizando 'min_samples_leaf' (4 valores)
+============================================================
+  min_samples_leaf=1                    | val_f1_weighted=0.7166±0.0041 | train=0.7233±0.0013 | 0.4s ★ BEST
+  min_samples_leaf=2                    | val_f1_weighted=0.7165±0.0040 | train=0.7234±0.0014 | 0.5s
+  min_samples_leaf=4                    | val_f1_weighted=0.7163±0.0039 | train=0.7234±0.0013 | 0.5s
+  min_samples_leaf=8                    | val_f1_weighted=0.7162±0.0045 | train=0.7228±0.0012 | 0.4s
+
+  ► Mejor valor para 'min_samples_leaf': 1 (val_f1_weighted=0.7166)
+
+============================================================
+Paso 5: Optimizando 'max_leaf_nodes' (3 valores)
+============================================================
+  max_leaf_nodes=15                   | val_f1_weighted=0.7166±0.0041 | train=0.7233±0.0013 | 0.5s ★ BEST
+  max_leaf_nodes=31                   | val_f1_weighted=0.7166±0.0041 | train=0.7233±0.0013 | 0.4s
+  max_leaf_nodes=63                   | val_f1_weighted=0.7166±0.0041 | train=0.7233±0.0013 | 0.5s
+
+  ► Mejor valor para 'max_leaf_nodes': 15 (val_f1_weighted=0.7166)
+
+============================================================
+Paso 6: Optimizando 'l2_regularization' (4 valores)
+============================================================
+  l2_regularization=0.0                  | val_f1_weighted=0.7166±0.0041 | train=0.7233±0.0013 | 0.4s ★ BEST
+  l2_regularization=0.01                 | val_f1_weighted=0.7161±0.0045 | train=0.7233±0.0010 | 0.4s
+  l2_regularization=0.1                  | val_f1_weighted=0.7161±0.0035 | train=0.7234±0.0009 | 0.4s
+  l2_regularization=1.0                  | val_f1_weighted=0.7170±0.0037 | train=0.7241±0.0005 | 0.5s ★ BEST
+
+  ► Mejor valor para 'l2_regularization': 1.0 (val_f1_weighted=0.7170)
+
+============================================================
+Paso 7: Optimizando 'max_bins' (3 valores)
+============================================================
+  max_bins=64                   | val_f1_weighted=0.7181±0.0038 | train=0.7235±0.0007 | 0.5s ★ BEST
+  max_bins=128                  | val_f1_weighted=0.7185±0.0030 | train=0.7226±0.0010 | 0.5s ★ BEST
+  max_bins=255                  | val_f1_weighted=0.7170±0.0037 | train=0.7241±0.0005 | 0.5s
+
+  ► Mejor valor para 'max_bins': 128 (val_f1_weighted=0.7185)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'max_iter': 100, 'learning_rate': 0.2, 'max_depth': 3, 'min_samples_leaf': 1, 'max_leaf_nodes': 15, 'l2_regularization': 1.0, 'max_bins': 128}
+Mejor val_f1_weighted: 0.7185
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.64      0.41      0.50      3127
+           1       0.77      0.90      0.83      6873
+
+    accuracy                           0.74     10000
+   macro avg       0.71      0.65      0.66     10000
+weighted avg       0.73      0.74      0.73     10000
+
+Matriz de confusión:
+[[1274 1853]
+ [ 703 6170]]
+Mejores hiperparámetros: {'max_iter': 100, 'learning_rate': 0.2, 'max_depth': 3, 'min_samples_leaf': 1, 'max_leaf_nodes': 15, 'l2_regularization': 1.0, 'max_bins': 128}
+Accuracy en test: 0.7444

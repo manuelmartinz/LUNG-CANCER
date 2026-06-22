@@ -1,0 +1,110 @@
+
+============================================================
+Paso 1: Optimizando 'units_1' (3 valores)
+============================================================
+  units_1=64                   | val_f1_weighted=0.7134±0.0028 | train=0.7216±0.0032 | 95.0s ★ BEST
+  units_1=128                  | val_f1_weighted=0.7139±0.0027 | train=0.7237±0.0020 | 89.3s ★ BEST
+  units_1=256                  | val_f1_weighted=0.7133±0.0024 | train=0.7258±0.0020 | 116.6s
+
+  ► Mejor valor para 'units_1': 128 (val_f1_weighted=0.7139)
+
+============================================================
+Paso 2: Optimizando 'units_2' (3 valores)
+============================================================
+  units_2=32                   | val_f1_weighted=0.7145±0.0032 | train=0.7218±0.0008 | 215.2s ★ BEST
+  units_2=64                   | val_f1_weighted=0.7139±0.0027 | train=0.7237±0.0020 | 91.9s
+  units_2=128                  | val_f1_weighted=0.7119±0.0017 | train=0.7252±0.0034 | 109.8s
+
+  ► Mejor valor para 'units_2': 32 (val_f1_weighted=0.7145)
+
+============================================================
+Paso 3: Optimizando 'units_3' (3 valores)
+============================================================
+  units_3=16                   | val_f1_weighted=0.7110±0.0018 | train=0.7207±0.0023 | 139.7s ★ BEST
+  units_3=32                   | val_f1_weighted=0.7143±0.0032 | train=0.7217±0.0010 | 174.7s ★ BEST
+  units_3=64                   | val_f1_weighted=0.7140±0.0025 | train=0.7237±0.0028 | 154.8s
+
+  ► Mejor valor para 'units_3': 32 (val_f1_weighted=0.7143)
+
+============================================================
+Paso 4: Optimizando 'dropout_1' (3 valores)
+============================================================
+  dropout_1=0.2                  | val_f1_weighted=0.7131±0.0030 | train=0.7227±0.0016 | 108.0s ★ BEST
+  dropout_1=0.3                  | val_f1_weighted=0.7141±0.0039 | train=0.7216±0.0008 | 151.9s ★ BEST
+  dropout_1=0.4                  | val_f1_weighted=0.7144±0.0026 | train=0.7200±0.0032 | 204.9s ★ BEST
+
+  ► Mejor valor para 'dropout_1': 0.4 (val_f1_weighted=0.7144)
+
+============================================================
+Paso 5: Optimizando 'dropout_2' (3 valores)
+============================================================
+  dropout_2=0.2                  | val_f1_weighted=0.7132±0.0037 | train=0.7198±0.0027 | 151.5s ★ BEST
+  dropout_2=0.3                  | val_f1_weighted=0.7132±0.0025 | train=0.7187±0.0034 | 76.4s ★ BEST
+  dropout_2=0.4                  | val_f1_weighted=0.7120±0.0046 | train=0.7173±0.0034 | 116.9s
+
+  ► Mejor valor para 'dropout_2': 0.3 (val_f1_weighted=0.7132)
+
+============================================================
+Paso 6: Optimizando 'l2_reg' (3 valores)
+============================================================
+  l2_reg=1e-05                | val_f1_weighted=0.7141±0.0037 | train=0.7180±0.0026 | 122.2s ★ BEST
+  l2_reg=0.0001               | val_f1_weighted=0.7139±0.0020 | train=0.7194±0.0033 | 281.1s
+  l2_reg=0.001                | val_f1_weighted=0.7127±0.0038 | train=0.7190±0.0028 | 106.9s
+
+  ► Mejor valor para 'l2_reg': 1e-05 (val_f1_weighted=0.7141)
+
+============================================================
+Paso 7: Optimizando 'learning_rate' (3 valores)
+============================================================
+  learning_rate=0.0001               | val_f1_weighted=0.7148±0.0053 | train=0.7195±0.0020 | 266.1s ★ BEST
+  learning_rate=0.0005               | val_f1_weighted=0.7134±0.0045 | train=0.7173±0.0032 | 79.8s
+  learning_rate=0.001                | val_f1_weighted=0.7128±0.0033 | train=0.7177±0.0031 | 77.9s
+
+  ► Mejor valor para 'learning_rate': 0.0001 (val_f1_weighted=0.7148)
+
+============================================================
+Paso 8: Optimizando 'batch_size' (3 valores)
+============================================================
+  batch_size=32                   | val_f1_weighted=0.7140±0.0036 | train=0.7191±0.0024 | 332.8s ★ BEST
+  batch_size=64                   | val_f1_weighted=0.7147±0.0049 | train=0.7195±0.0020 | 217.3s ★ BEST
+  batch_size=128                  | val_f1_weighted=0.7132±0.0049 | train=0.7172±0.0029 | 181.2s
+
+  ► Mejor valor para 'batch_size': 64 (val_f1_weighted=0.7147)
+
+============================================================
+Paso 9: Optimizando 'epochs' (2 valores)
+============================================================
+  epochs=120                  | val_f1_weighted=0.7148±0.0046 | train=0.7192±0.0019 | 152.6s ★ BEST
+  epochs=200                  | val_f1_weighted=0.7150±0.0051 | train=0.7197±0.0019 | 194.5s ★ BEST
+
+  ► Mejor valor para 'epochs': 200 (val_f1_weighted=0.7150)
+WARNING:tensorflow:From C:\Users\manum\miniconda3\envs\tfg-lung\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'units_1': 128, 'units_2': 32, 'units_3': 32, 'dropout_1': 0.4, 'dropout_2': 0.3, 'l2_reg': 1e-05, 'learning_rate': 0.0001, 'batch_size': 64, 'epochs': 200}
+Mejor val_f1_weighted: 0.7150
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.63      0.41      0.50      3127
+           1       0.77      0.89      0.82      6873
+
+    accuracy                           0.74     10000
+   macro avg       0.70      0.65      0.66     10000
+weighted avg       0.73      0.74      0.72     10000
+
+Matriz de confusión:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\mlp_gridsearch.py", line 265, in <module>
+    main()
+  File "C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\src\models\mlp_gridsearch.py", line 238, in main
+    print(cm)
+          ^^
+NameError: name 'cm' is not defined

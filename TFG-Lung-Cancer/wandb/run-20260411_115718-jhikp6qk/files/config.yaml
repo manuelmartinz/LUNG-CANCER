@@ -1,0 +1,80 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            i7joj6arbzo76etg6fe8x7wearddm7t3:
+                args:
+                    - --data
+                    - src/data/lung_cancer_dataset.csv
+                email: manuelmh@correo.ugr.es
+                executable: /home/manuelmh/proyectos/manuel/.venv/bin/python3
+                host: BOOK-9AKGEL70A9
+                os: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+                program: -m src.models.adaboost_gridsearch
+                python: CPython 3.12.3
+                root: /home/manuelmh/proyectos/manuel
+                startedAt: "2026-04-11T09:57:18.535278Z"
+                writerId: i7joj6arbzo76etg6fe8x7wearddm7t3
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 5
+                - 53
+            "2":
+                - 5
+                - 53
+            "3":
+                - 13
+                - 16
+            "4": 3.12.3
+            "5": 0.25.1
+            "12": 0.25.1
+            "13": linux-x86_64
+drop_cols:
+    value:
+        - patient_id
+encoding:
+    value: onehot
+filepath:
+    value: src/data/lung_cancer_dataset.csv
+impute_strategy_cat:
+    value: most_frequent
+impute_strategy_num:
+    value: median
+model:
+    value: AdaBoost
+n_rows:
+    value: null
+param_grid:
+    value:
+        estimator__max_depth:
+            - "1"
+            - "2"
+            - "3"
+            - "5"
+            - "7"
+        estimator__min_samples_leaf:
+            - "1"
+            - "2"
+            - "5"
+            - "10"
+        learning_rate:
+            - "0.001"
+            - "0.01"
+            - "0.05"
+            - "0.1"
+            - "0.5"
+            - "1.0"
+        n_estimators:
+            - "50"
+            - "100"
+            - "200"
+            - "300"
+            - "500"
+random_state:
+    value: 42
+scale:
+    value: true
+target_col:
+    value: lung_cancer

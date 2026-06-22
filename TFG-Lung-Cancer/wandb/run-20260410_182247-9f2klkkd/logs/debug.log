@@ -1,0 +1,21 @@
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_setup.py:_flush():81] Configure stats pid to 23822
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /home/manuelmh/proyectos/manuel/wandb/run-20260410_182247-9f2klkkd/logs/debug.log
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /home/manuelmh/proyectos/manuel/wandb/run-20260410_182247-9f2klkkd/logs/debug-internal.log
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_init.py:init():844] calling init triggers
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'model': 'XGBoost', 'param_grid': {'n_estimators': ['10', '25', '50', '100', '200'], 'max_depth': ['3', '5', '10', '15', '20', 'None'], 'learning_rate': ['0.01', '0.1', '0.2', '0.3'], 'subsample': ['0.5', '0.6', '0.7', '0.8', '0.9', '1.0'], 'colsample_bytree': ['0.5', '0.6', '0.7', '0.8', '0.9', '1.0']}, 'filepath': 'src/data/lung_cancer_dataset.csv', 'target_col': 'lung_cancer', 'drop_cols': ['patient_id'], 'n_rows': None, 'encoding': 'onehot', 'scale': True, 'impute_strategy_num': 'median', 'impute_strategy_cat': 'most_frequent', 'random_state': 42, '_wandb': {}}
+2026-04-10 18:22:47,472 INFO    MainThread:23822 [wandb_init.py:init():892] starting backend
+2026-04-10 18:22:48,308 INFO    MainThread:23822 [wandb_init.py:init():895] sending inform_init request
+2026-04-10 18:22:48,312 INFO    MainThread:23822 [wandb_init.py:init():903] backend started and connected
+2026-04-10 18:22:48,333 INFO    MainThread:23822 [wandb_init.py:init():973] updated telemetry
+2026-04-10 18:22:48,334 INFO    MainThread:23822 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-04-10 18:22:49,338 INFO    MainThread:23822 [wandb_init.py:init():1042] starting run threads in backend
+2026-04-10 18:22:49,370 INFO    MainThread:23822 [wandb_run.py:_console_start():2524] atexit reg
+2026-04-10 18:22:49,371 INFO    MainThread:23822 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-04-10 18:22:49,371 INFO    MainThread:23822 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-04-10 18:22:49,371 INFO    MainThread:23822 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-04-10 18:22:49,375 INFO    MainThread:23822 [wandb_init.py:init():1082] run started, returning control to user process
+2026-04-10 18:22:54,794 INFO    wandb-AsyncioManager-main:23822 [service_client.py:_forward_responses():134] Reached EOF.
+2026-04-10 18:22:54,795 INFO    wandb-AsyncioManager-main:23822 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.

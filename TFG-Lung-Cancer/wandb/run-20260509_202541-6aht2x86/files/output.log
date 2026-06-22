@@ -1,0 +1,73 @@
+
+============================================================
+Paso 1: Optimizando 'final_estimator__iterations' (5 valores)
+============================================================
+  final_estimator__iterations=25                   | val_f1_weighted=0.7158±0.0068 | train=0.7190±0.0026 | 56.9s ★ BEST
+  final_estimator__iterations=50                   | val_f1_weighted=0.7140±0.0060 | train=0.7172±0.0024 | 58.5s
+  final_estimator__iterations=100                  | val_f1_weighted=0.7154±0.0039 | train=0.7162±0.0017 | 57.2s
+  final_estimator__iterations=200                  | val_f1_weighted=0.7139±0.0053 | train=0.7147±0.0009 | 55.0s
+  final_estimator__iterations=500                  | val_f1_weighted=0.7128±0.0045 | train=0.7159±0.0009 | 60.4s
+
+  ► Mejor valor para 'final_estimator__iterations': 25 (val_f1_weighted=0.7158)
+
+============================================================
+Paso 2: Optimizando 'final_estimator__depth' (3 valores)
+============================================================
+  final_estimator__depth=4                    | val_f1_weighted=0.7139±0.0056 | train=0.7161±0.0019 | 52.2s ★ BEST
+  final_estimator__depth=6                    | val_f1_weighted=0.7158±0.0068 | train=0.7190±0.0026 | 54.0s ★ BEST
+  final_estimator__depth=8                    | val_f1_weighted=0.7166±0.0042 | train=0.7178±0.0017 | 52.2s ★ BEST
+
+  ► Mejor valor para 'final_estimator__depth': 8 (val_f1_weighted=0.7166)
+
+============================================================
+Paso 3: Optimizando 'final_estimator__learning_rate' (6 valores)
+============================================================
+  final_estimator__learning_rate=0.03                 | val_f1_weighted=0.7129±0.0045 | train=0.7159±0.0024 | 53.4s ★ BEST
+  final_estimator__learning_rate=0.1                  | val_f1_weighted=0.7150±0.0048 | train=0.7176±0.0023 | 88.4s ★ BEST
+  final_estimator__learning_rate=0.2                  | val_f1_weighted=0.7162±0.0043 | train=0.7181±0.0024 | 95.3s ★ BEST
+  final_estimator__learning_rate=0.3                  | val_f1_weighted=0.7158±0.0040 | train=0.7175±0.0020 | 68.0s
+  final_estimator__learning_rate=0.4                  | val_f1_weighted=0.7160±0.0033 | train=0.7165±0.0020 | 54.3s
+  final_estimator__learning_rate=0.5                  | val_f1_weighted=0.7166±0.0042 | train=0.7178±0.0017 | 52.9s ★ BEST
+
+  ► Mejor valor para 'final_estimator__learning_rate': 0.5 (val_f1_weighted=0.7166)
+
+============================================================
+Paso 4: Optimizando 'final_estimator__l2_leaf_reg' (3 valores)
+============================================================
+  final_estimator__l2_leaf_reg=1                    | val_f1_weighted=0.7175±0.0039 | train=0.7177±0.0022 | 49.9s ★ BEST
+  final_estimator__l2_leaf_reg=3                    | val_f1_weighted=0.7166±0.0042 | train=0.7178±0.0017 | 83.9s
+  final_estimator__l2_leaf_reg=5                    | val_f1_weighted=0.7175±0.0041 | train=0.7185±0.0023 | 56.4s ★ BEST
+
+  ► Mejor valor para 'final_estimator__l2_leaf_reg': 5 (val_f1_weighted=0.7175)
+
+============================================================
+Paso 5: Optimizando 'final_estimator__border_count' (3 valores)
+============================================================
+  final_estimator__border_count=32                   | val_f1_weighted=0.7158±0.0042 | train=0.7188±0.0018 | 55.2s ★ BEST
+  final_estimator__border_count=64                   | val_f1_weighted=0.7165±0.0051 | train=0.7175±0.0015 | 57.8s ★ BEST
+  final_estimator__border_count=128                  | val_f1_weighted=0.7169±0.0040 | train=0.7185±0.0029 | 51.0s ★ BEST
+
+  ► Mejor valor para 'final_estimator__border_count': 128 (val_f1_weighted=0.7169)
+
+============================================================
+Optimización finalizada
+Mejores hiperparámetros: {'final_estimator__iterations': 25, 'final_estimator__depth': 8, 'final_estimator__learning_rate': 0.5, 'final_estimator__l2_leaf_reg': 5, 'final_estimator__border_count': 128}
+Mejor val_f1_weighted: 0.7169
+============================================================
+
+=== Evaluación en Test ===
+              precision    recall  f1-score   support
+
+           0       0.66      0.39      0.49      3127
+           1       0.77      0.91      0.83      6873
+
+    accuracy                           0.75     10000
+   macro avg       0.71      0.65      0.66     10000
+weighted avg       0.73      0.75      0.72     10000
+
+Matriz de confusión:
+[[1225 1902]
+ [ 633 6240]]
+Mejores hiperparámetros: {'final_estimator__iterations': 25, 'final_estimator__depth': 8, 'final_estimator__learning_rate': 0.5, 'final_estimator__l2_leaf_reg': 5, 'final_estimator__border_count': 128}
+Accuracy en test: 0.7465
+ROC AUC en test: 0.7759

@@ -1,0 +1,17 @@
+
+============================================================
+Paso 1: Optimizando 'n_estimators' (5 valores)
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/manuelmh/proyectos/manuel/src/models/hist_gradient_boosting_gridsearch.py", line 98, in <module>
+    main()
+  File "/home/manuelmh/proyectos/manuel/src/models/hist_gradient_boosting_gridsearch.py", line 70, in main
+    gs.fit(X_train, y_train)
+  File "/home/manuelmh/proyectos/manuel/src/grid_search.py", line 100, in fit
+    model = clone(self.estimator).set_params(**trial_params)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manuelmh/proyectos/manuel/.venv/lib/python3.12/site-packages/sklearn/base.py", line 366, in set_params
+    raise ValueError(
+ValueError: Invalid parameter 'n_estimators' for estimator HistGradientBoostingClassifier(random_state=42). Valid parameters are: ['categorical_features', 'class_weight', 'early_stopping', 'interaction_cst', 'l2_regularization', 'learning_rate', 'loss', 'max_bins', 'max_depth', 'max_features', 'max_iter', 'max_leaf_nodes', 'min_samples_leaf', 'monotonic_cst', 'n_iter_no_change', 'random_state', 'scoring', 'tol', 'validation_fraction', 'verbose', 'warm_start'].

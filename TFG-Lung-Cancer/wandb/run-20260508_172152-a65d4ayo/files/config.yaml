@@ -1,0 +1,406 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            3bqleexcpxe5asp3gzkgruswat2xcopx:
+                args:
+                    - --data
+                    - src/data/lung_cancer_dataset.csv
+                cpu_count: 12
+                cpu_count_logical: 14
+                disk:
+                    /:
+                        total: "487490318336"
+                        used: "148214018048"
+                email: manuelmh@correo.ugr.es
+                executable: C:\Users\manum\miniconda3\envs\tfg-lung\python.exe
+                git:
+                    commit: 7eacab6c3d916b868b043c7ba010a4bcaff723b1
+                    remote: https://github.com/manuelmartinz/TFG-Lung-Cancer.git
+                host: BOOK-9AKGEL70A9
+                memory:
+                    total: "16605630464"
+                os: Windows-10-10.0.26200-SP0
+                program: -m src.models.xgboost_gridsearch
+                python: CPython 3.11.15
+                root: C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer
+                startedAt: "2026-05-08T15:21:52.806755Z"
+                writerId: 3bqleexcpxe5asp3gzkgruswat2xcopx
+        m: []
+        python_version: 3.11.15
+        t:
+            "1":
+                - 5
+                - 6
+                - 53
+            "2":
+                - 5
+                - 6
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+                - 62
+            "4": 3.11.15
+            "5": 0.25.1
+            "8":
+                - 3
+            "12": 0.25.1
+            "13": windows-amd64
+        visualize:
+            step_1/barras_val_f1:
+                panel_config:
+                    fieldSettings:
+                        label: param_value
+                        value: val_f1_mean
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: 'Paso 1 — n_estimators: val F1 por valor'
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_1/barras_val_f1_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_1/lineas_train_vs_val:
+                panel_config:
+                    fieldSettings:
+                        lineKey: lineKey
+                        lineVal: lineVal
+                        step: step
+                    panelDefId: wandb/lineseries/v0
+                    stringSettings:
+                        title: 'Paso 1 — n_estimators: Train vs Val F1'
+                        xname: índice valor
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_1/lineas_train_vs_val_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_2/barras_val_f1:
+                panel_config:
+                    fieldSettings:
+                        label: param_value
+                        value: val_f1_mean
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: 'Paso 2 — max_depth: val F1 por valor'
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_2/barras_val_f1_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_2/lineas_train_vs_val:
+                panel_config:
+                    fieldSettings:
+                        lineKey: lineKey
+                        lineVal: lineVal
+                        step: step
+                    panelDefId: wandb/lineseries/v0
+                    stringSettings:
+                        title: 'Paso 2 — max_depth: Train vs Val F1'
+                        xname: índice valor
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_2/lineas_train_vs_val_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_3/barras_val_f1:
+                panel_config:
+                    fieldSettings:
+                        label: param_value
+                        value: val_f1_mean
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: 'Paso 3 — learning_rate: val F1 por valor'
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_3/barras_val_f1_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_3/lineas_train_vs_val:
+                panel_config:
+                    fieldSettings:
+                        lineKey: lineKey
+                        lineVal: lineVal
+                        step: step
+                    panelDefId: wandb/lineseries/v0
+                    stringSettings:
+                        title: 'Paso 3 — learning_rate: Train vs Val F1'
+                        xname: índice valor
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_3/lineas_train_vs_val_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_4/barras_val_f1:
+                panel_config:
+                    fieldSettings:
+                        label: param_value
+                        value: val_f1_mean
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: 'Paso 4 — subsample: val F1 por valor'
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_4/barras_val_f1_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_4/lineas_train_vs_val:
+                panel_config:
+                    fieldSettings:
+                        lineKey: lineKey
+                        lineVal: lineVal
+                        step: step
+                    panelDefId: wandb/lineseries/v0
+                    stringSettings:
+                        title: 'Paso 4 — subsample: Train vs Val F1'
+                        xname: índice valor
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_4/lineas_train_vs_val_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_5/barras_val_f1:
+                panel_config:
+                    fieldSettings:
+                        label: param_value
+                        value: val_f1_mean
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: 'Paso 5 — colsample_bytree: val F1 por valor'
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_5/barras_val_f1_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            step_5/lineas_train_vs_val:
+                panel_config:
+                    fieldSettings:
+                        lineKey: lineKey
+                        lineVal: lineVal
+                        step: step
+                    panelDefId: wandb/lineseries/v0
+                    stringSettings:
+                        title: 'Paso 5 — colsample_bytree: Train vs Val F1'
+                        xname: índice valor
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: step_5/lineas_train_vs_val_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+drop_cols:
+    value:
+        - patient_id
+encoding:
+    value: onehot
+filepath:
+    value: src/data/lung_cancer_dataset.csv
+impute_strategy_cat:
+    value: most_frequent
+impute_strategy_num:
+    value: median
+model:
+    value: XGBoost
+n_rows:
+    value: null
+param_grid:
+    value:
+        colsample_bytree:
+            - "0.5"
+            - "0.6"
+            - "0.7"
+            - "0.8"
+            - "0.9"
+            - "1.0"
+        learning_rate:
+            - "0.01"
+            - "0.1"
+            - "0.2"
+            - "0.3"
+        max_depth:
+            - "3"
+            - "5"
+            - "10"
+            - "15"
+            - "20"
+            - None
+        n_estimators:
+            - "10"
+            - "25"
+            - "50"
+            - "100"
+            - "200"
+        subsample:
+            - "0.5"
+            - "0.6"
+            - "0.7"
+            - "0.8"
+            - "0.9"
+            - "1.0"
+random_state:
+    value: 42
+scale:
+    value: true
+target_col:
+    value: lung_cancer

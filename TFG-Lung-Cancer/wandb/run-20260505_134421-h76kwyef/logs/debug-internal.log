@@ -1,0 +1,71 @@
+{"time":"2026-05-05T13:44:23.7398459+02:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-05-05T13:44:23.7430359+02:00","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
+{"time":"2026-05-05T13:44:24.0509882+02:00","level":"INFO","msg":"stream: created new stream","id":"h76kwyef"}
+{"time":"2026-05-05T13:44:24.0509882+02:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-05-05T13:44:24.0516555+02:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-05-05T13:44:24.0516555+02:00","level":"INFO","msg":"writer: started","stream_id":"h76kwyef"}
+{"time":"2026-05-05T13:44:24.0516555+02:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-05-05T13:44:24.4576218+02:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":2}
+{"time":"2026-05-05T13:44:24.7730983+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:44:39.4775179+02:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":1,"console_lines":6}
+{"time":"2026-05-05T13:44:39.8686163+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:44:54.4582763+02:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":0,"events_lines":2,"console_offset":7,"console_lines":4,"uploaded_len":2}
+{"time":"2026-05-05T13:44:54.8094064+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:44:59.5334081+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:45:09.4582155+02:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":2,"events_lines":1}
+{"time":"2026-05-05T13:45:09.8433822+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:45:24.4578073+02:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":3,"events_lines":1,"uploaded_len":1}
+{"time":"2026-05-05T13:45:24.7105588+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:45:37.1209098+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:45:39.4617414+02:00","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":1,"console_offset":11,"console_lines":6}
+{"time":"2026-05-05T13:45:40.1636968+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:45:44.1902177+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2026-05-05T13:45:54.5014203+02:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":4,"events_lines":1,"console_offset":17,"console_lines":2,"uploaded_len":1}
+{"time":"2026-05-05T13:45:54.8287052+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:46:09.4629398+02:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":5,"events_lines":1,"console_offset":19,"console_lines":1}
+{"time":"2026-05-05T13:46:09.8303337+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:46:16.5019692+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2026-05-05T13:46:24.4834024+02:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":6,"events_lines":1,"console_offset":20,"console_lines":1}
+{"time":"2026-05-05T13:46:24.7918573+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:46:34.1489067+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:46:39.5562069+02:00","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":1,"history_lines":1,"events_offset":7,"events_lines":1,"console_offset":21,"console_lines":9,"uploaded_len":2}
+{"time":"2026-05-05T13:46:39.8648886+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:46:54.4579476+02:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":8,"events_lines":2,"console_offset":30,"console_lines":4}
+{"time":"2026-05-05T13:46:54.8094293+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:47:06.9082981+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2026-05-05T13:47:09.4578896+02:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":10,"events_lines":1,"console_offset":34,"console_lines":1,"uploaded_len":1}
+{"time":"2026-05-05T13:47:09.7607449+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:47:24.4581503+02:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":11,"events_lines":1}
+{"time":"2026-05-05T13:47:24.6889422+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:47:29.1254609+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2026-05-05T13:47:39.4580873+02:00","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":2,"history_lines":1,"console_offset":35,"console_lines":7}
+{"time":"2026-05-05T13:47:39.661803+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:47:54.458165+02:00","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":3,"history_lines":1,"events_offset":12,"events_lines":2,"console_offset":42,"console_lines":10,"uploaded_len":2}
+{"time":"2026-05-05T13:47:54.8051562+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:48:03.6133018+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:48:09.4669221+02:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":52,"console_lines":2,"uploaded_len":1}
+{"time":"2026-05-05T13:48:09.7038108+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:48:11.3417627+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2026-05-05T13:48:14.5542898+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2026-05-05T13:48:16.5699761+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:48:19.0742486+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:48:24.4623629+02:00","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":4,"history_lines":1,"events_offset":14,"events_lines":1,"console_offset":54,"console_lines":7,"uploaded_len":2}
+{"time":"2026-05-05T13:48:24.7374441+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:48:39.5859017+02:00","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":5,"history_lines":1,"events_offset":15,"events_lines":1,"console_offset":61,"console_lines":8}
+{"time":"2026-05-05T13:48:39.932865+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:48:44.099871+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:48:47.3798689+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:48:47.9318077+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:48:48.8123091+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2026-05-05T13:48:54.4613539+02:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":16,"events_lines":1,"console_offset":69,"console_lines":2,"uploaded_len":2}
+{"time":"2026-05-05T13:48:54.8163539+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:49:09.457957+02:00","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":6,"history_lines":3,"events_offset":17,"events_lines":1,"console_offset":71,"console_lines":26,"uploaded_len":5}
+{"time":"2026-05-05T13:49:09.7277812+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:49:16.1056343+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-05T13:49:16.1056343+02:00","level":"INFO","msg":"filestream: sending request","total_files":0,"uploaded_len":1,"complete":true,"exit_code":0}
+{"time":"2026-05-05T13:49:16.7803395+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-05-05T13:49:16.7823515+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-05-05T13:49:16.7872041+02:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-05-05T13:49:16.7872041+02:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-05-05T13:49:16.7877076+02:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-05-05T13:49:16.7877076+02:00","level":"INFO","msg":"stream: closed"}

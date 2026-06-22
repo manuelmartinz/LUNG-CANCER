@@ -1,0 +1,113 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            2elaj09ny3f5ueergvanr2owx7vulkm3:
+                args:
+                    - --data
+                    - src/data/lung_cancer_dataset.csv
+                cpu_count: 12
+                cpu_count_logical: 14
+                disk:
+                    /:
+                        total: "487490318336"
+                        used: "148133310464"
+                email: manuelmh@correo.ugr.es
+                executable: C:\Users\manum\miniconda3\envs\tfg-lung\python.exe
+                git:
+                    commit: 7eacab6c3d916b868b043c7ba010a4bcaff723b1
+                    remote: https://github.com/manuelmartinz/TFG-Lung-Cancer.git
+                host: BOOK-9AKGEL70A9
+                memory:
+                    total: "16605630464"
+                os: Windows-10-10.0.26200-SP0
+                program: -m src.models.catboost_gridsearch
+                python: CPython 3.11.15
+                root: C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer
+                startedAt: "2026-05-09T15:08:28.866141Z"
+                writerId: 2elaj09ny3f5ueergvanr2owx7vulkm3
+        m: []
+        python_version: 3.11.15
+        t:
+            "1":
+                - 5
+                - 7
+                - 53
+            "2":
+                - 5
+                - 7
+                - 53
+            "3":
+                - 13
+                - 16
+            "4": 3.11.15
+            "5": 0.25.1
+            "8":
+                - 3
+            "12": 0.25.1
+            "13": windows-amd64
+cat_features:
+    value:
+        - gender
+        - radon_exposure
+        - asbestos_exposure
+        - secondhand_smoke_exposure
+        - copd_diagnosis
+        - alcohol_consumption
+        - family_history
+drop_cols:
+    value:
+        - patient_id
+encoding:
+    value: none
+filepath:
+    value: src/data/lung_cancer_dataset.csv
+impute_strategy_cat:
+    value: most_frequent
+impute_strategy_num:
+    value: median
+model:
+    value: CatBoost (sin One-Hot)
+n_rows:
+    value: null
+param_grid:
+    value:
+        bagging_temperature:
+            - "0"
+            - "0.5"
+            - "1"
+            - "2"
+        border_count:
+            - "32"
+            - "64"
+            - "128"
+            - "254"
+        depth:
+            - "4"
+            - "6"
+            - "8"
+            - "10"
+        iterations:
+            - "100"
+            - "200"
+            - "500"
+            - "800"
+            - "1000"
+        l2_leaf_reg:
+            - "1"
+            - "3"
+            - "5"
+            - "7"
+            - "9"
+        learning_rate:
+            - "0.01"
+            - "0.03"
+            - "0.05"
+            - "0.1"
+            - "0.2"
+random_state:
+    value: 42
+scale:
+    value: false
+target_col:
+    value: lung_cancer

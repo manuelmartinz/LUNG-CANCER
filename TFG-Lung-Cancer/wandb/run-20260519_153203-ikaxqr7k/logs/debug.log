@@ -1,0 +1,21 @@
+2026-05-19 15:32:03,352 INFO    MainThread:28420 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-05-19 15:32:03,354 INFO    MainThread:28420 [wandb_setup.py:_flush():81] Configure stats pid to 28420
+2026-05-19 15:32:03,354 INFO    MainThread:28420 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-19 15:32:03,354 INFO    MainThread:28420 [wandb_init.py:setup_run_log_directory():717] Logging user logs to C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\wandb\run-20260519_153203-ikaxqr7k\logs\debug.log
+2026-05-19 15:32:03,354 INFO    MainThread:28420 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to C:\Users\manum\OneDrive\Desktop\TFG-Lung-Cancer\wandb\run-20260519_153203-ikaxqr7k\logs\debug-internal.log
+2026-05-19 15:32:03,354 INFO    MainThread:28420 [wandb_init.py:init():844] calling init triggers
+2026-05-19 15:32:03,355 INFO    MainThread:28420 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'model': 'KerasBinaryNN', 'param_grid': {'units_1': ['64', '128', '256'], 'units_2': ['32', '64', '128'], 'units_3': ['16', '32', '64'], 'dropout_1': ['0.2', '0.3', '0.4'], 'dropout_2': ['0.2', '0.3', '0.4'], 'l2_reg': ['1e-05', '0.0001', '0.001'], 'learning_rate': ['0.0001', '0.0005', '0.001'], 'batch_size': ['32', '64', '128'], 'epochs': ['120', '200']}, 'filepath': 'src/data/lung_cancer_dataset.csv', 'target_col': 'lung_cancer', 'drop_cols': ['patient_id'], 'n_rows': None, 'encoding': 'onehot', 'scale': True, 'impute_strategy_num': 'median', 'impute_strategy_cat': 'most_frequent', 'random_state': 42, '_wandb': {}}
+2026-05-19 15:32:03,356 INFO    MainThread:28420 [wandb_init.py:init():892] starting backend
+2026-05-19 15:32:05,666 INFO    MainThread:28420 [wandb_init.py:init():895] sending inform_init request
+2026-05-19 15:32:05,684 INFO    MainThread:28420 [wandb_init.py:init():903] backend started and connected
+2026-05-19 15:32:05,705 INFO    MainThread:28420 [wandb_init.py:init():973] updated telemetry
+2026-05-19 15:32:05,754 INFO    MainThread:28420 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-05-19 15:32:06,425 INFO    MainThread:28420 [wandb_init.py:init():1042] starting run threads in backend
+2026-05-19 15:32:06,511 INFO    MainThread:28420 [wandb_run.py:_console_start():2524] atexit reg
+2026-05-19 15:32:06,511 INFO    MainThread:28420 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-05-19 15:32:06,511 INFO    MainThread:28420 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-05-19 15:32:06,511 INFO    MainThread:28420 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-05-19 15:32:06,516 INFO    MainThread:28420 [wandb_init.py:init():1082] run started, returning control to user process
+2026-05-19 15:32:48,919 INFO    wandb-AsyncioManager-main:28420 [service_client.py:_forward_responses():134] Reached EOF.
+2026-05-19 15:32:48,919 INFO    wandb-AsyncioManager-main:28420 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.

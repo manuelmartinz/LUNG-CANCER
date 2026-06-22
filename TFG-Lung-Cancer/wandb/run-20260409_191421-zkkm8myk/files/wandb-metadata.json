@@ -1,0 +1,26 @@
+{
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-04-09T17:14:21.553157Z",
+  "args": [
+    "--data",
+    "src/data/lung_cancer_dataset.csv"
+  ],
+  "program": "-m src.models.logistic_regression_gridsearch",
+  "email": "manuelmh@correo.ugr.es",
+  "root": "/home/manuelmh/proyectos/manuel",
+  "host": "BOOK-9AKGEL70A9",
+  "executable": "/home/manuelmh/proyectos/manuel/.venv/bin/python3",
+  "cpu_count": 7,
+  "cpu_count_logical": 14,
+  "disk": {
+    "/": {
+      "total": "1081101176832",
+      "used": "8971907072"
+    }
+  },
+  "memory": {
+    "total": "8043290624"
+  },
+  "writerId": "i3rjwibsbk39d89mh2jflpq97bko5kui"
+}
